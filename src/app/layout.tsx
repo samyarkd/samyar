@@ -1,8 +1,18 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+import clsx from 'clsx'
+import localFont from 'next/font/local'
+
+const EduTASBeginner = localFont({
+  src: '../utils/assets/fonts/Edu_TAS_Beginner/EduTASBeginner-VariableFont_wght.ttf',
+  display: 'swap',
+})
+
+const Agbalumo = localFont({
+  src: '../utils/assets/fonts/Agbalumo/Agbalumo-Regular.ttf',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +26,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={EduTASBeginner.className}>
+        <header className="max-w-6xl mx-auto p-4"> <span className={clsx(Agbalumo.className, "text-2xl")}>Samyar</span></header>
+
+        {children}
+
+      </body>
     </html>
   )
 }
