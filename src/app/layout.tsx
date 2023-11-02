@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 import './globals.css'
 
+import { MobileMenu } from '@/components/layouts/mobile-menu'
 import clsx from 'clsx'
 import localFont from 'next/font/local'
+import Link from 'next/link'
 
 const EduTASBeginner = localFont({
   src: '../utils/assets/fonts/Edu_TAS_Beginner/EduTASBeginner-VariableFont_wght.ttf',
@@ -26,8 +28,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={EduTASBeginner.className}>
-        <header className="max-w-6xl mx-auto p-4"> <span className={clsx(Agbalumo.className, "text-2xl")}>Samyar</span></header>
+      <body className={clsx(EduTASBeginner.className, "relative min-h-screen")}>
+        <header className="max-w-5xl flex items-baseline mx-auto p-4">
+          <Link href='/' className={clsx(Agbalumo.className, "text-2xl")}>Samyar</Link>
+
+          <MobileMenu />
+
+          <ul className='hidden ms-auto sm:flex gap-8 sm:items-baseline'>
+            <Link href='/blog' className={clsx("text-lg")}>Blog</Link>
+            <Link href='/contact' className={clsx("text-lg")}>Contact</Link>
+            <Link href='/about' className={clsx("text-lg")}>About</Link>
+          </ul>
+        </header>
 
         {children}
 
@@ -35,3 +47,4 @@ export default function RootLayout({
     </html>
   )
 }
+
