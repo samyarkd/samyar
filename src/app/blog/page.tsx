@@ -3,7 +3,6 @@ import { fetchEntries } from "@/utils/contentful"
 
 const Blog = async () => {
   const blogPosts = await fetchEntries()
-  console.log(blogPosts[0].fields)
 
   return (
     <Content >
