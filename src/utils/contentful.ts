@@ -14,9 +14,17 @@ const client = createClient({
 
 export async function fetchEntries() {
   const entries = await client.getEntries({
-    content_type: 'undefined'
+    content_type: 'undefined',
+    select: ['fields.title', 'fields.description', "fields.slug", "fields.thumbnail"],
+    order: ["-sys.createdAt"]
   })
   if (entries.items) return entries.items
 }
 
-export default { fetchEntries }
+export async function fetchEntry(id: string) {
+  const entry = await client.getEntry(id)
+
+  if (entry) return entry
+  return null
+}
+

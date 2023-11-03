@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 import { MobileMenu } from '@/components/layouts/mobile-menu'
+import BlogTransition from '@/components/transition'
 import clsx from 'clsx'
 import localFont from 'next/font/local'
 import Link from 'next/link'
@@ -41,7 +42,9 @@ export default function RootLayout({
           </ul>
         </header>
 
-        {children}
+        <BlogTransition>
+          {children}
+        </BlogTransition>
 
       </body>
     </html>
