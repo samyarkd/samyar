@@ -6,14 +6,15 @@ export default function Home() {
     <Content className="flex flex-col-reverse sm:flex-row gap-4">
       <Image
         className="w-full shadow-xl dark:shadow-white/20 shadow-black/10 max-w-xs sm:w-2/4 rounded-lg"
-        width={200}
-        height={200}
+        width={620}
+        height={620}
         alt="Samyar Koei"
         src={'/samyar.jpg'} />
       <div className="space-y-4">
         <h2 className="text-4xl">Samyar Koei - <span className="text-2xl text-gray-300">Web Dev 🕸️</span></h2>
-        <p className="col-span-3">This is by far the most hassle free and best way to implement this. It is purely CSS and very very simple to do, no extra files - nothing. Ok, its not the best way possible, but it works very well, very reliable (never failed when testing across very old browsers) and very fast to load.
-          Found it a few months ago, and used it ever since, simply copy and paste this code in to your CSS.</p>
+        <p className="col-span-3">
+          Welcome to my personal blog and portfolio 👀. I'm a web developer who is specialized in <strong>front-end</strong> but worked <strong>full-stack</strong> too, with <strong>NextJs</strong> and <strong>ExpressJs</strong> and <strong>ReactJs</strong>. I love bleeding edge tech 🩸 and learning new cool stuff.
+        </p>
       </div>
     </Content>
 
