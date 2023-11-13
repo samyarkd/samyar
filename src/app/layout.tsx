@@ -7,8 +7,8 @@ import clsx from 'clsx'
 import localFont from 'next/font/local'
 import Link from 'next/link'
 
-const EduTASBeginner = localFont({
-  src: '../utils/assets/fonts/Edu_TAS_Beginner/EduTASBeginner-VariableFont_wght.ttf',
+const PatrickHandSC = localFont({
+  src: '../utils/assets/fonts/PatrickHandSC-Regular.ttf',
   display: 'swap',
 })
 
@@ -29,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={clsx(EduTASBeginner.className, "relative min-h-screen")}>
+      <body className={clsx(PatrickHandSC.className, "relative min-h-screen")}>
         <header className="max-w-5xl flex items-baseline mx-auto p-4">
           <Link href='/' className={clsx(Agbalumo.className, "text-2xl")}>Samyar</Link>
 
