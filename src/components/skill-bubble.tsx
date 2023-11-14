@@ -22,7 +22,7 @@ const SkillBubble = () => {
 
         const pack = d3.pack()
           .size([svgWidth - margin * 2, svgHeight - margin * 2])
-          .padding(3)
+          .padding(2)
 
         // @ts-expect-error
         const root = pack(d3.hierarchy<any>({ children: skills }).sum((d) => d.value).sort((a, b) => b.value - a.value))
@@ -36,8 +36,17 @@ const SkillBubble = () => {
           })
 
           const text = document.createElementNS("http://www.w3.org/2000/svg", 'text')
-          // @ts-expect-error
-          let fontSize = Math.min((2 * d.r) / (d.data.label.length / 2), 40) // Adjusting font size based on circle radius
+
+          /* Adjusting font size based on circle radius */
+          let fontSize
+
+          if (window.innerWidth < 450) {
+            // @ts-expect-error
+            fontSize = Math.min((2 * d.r) / (d.data.label.length), 35)
+          } else {
+            // @ts-expect-error
+            fontSize = Math.min((2 * d.r) / (d.data.label.length / 2), 40)
+          }
 
           if (fontSize < 14) {
             fontSize = 14
@@ -69,9 +78,23 @@ const SkillBubble = () => {
           } else {
             text.setAttributeNS(null, 'fill', 'black')
           }
-
           // @ts-expect-error
-          text.innerHTML = d.data.label
+          const name = d.data.label.split("-")
+          if (name.length > 1) {
+            // @ts-expect-error
+            name.forEach((n, idx) => {
+              const tspan = document.createElementNS("http://www.w3.org/2000/svg", 'tspan')
+              tspan.setAttributeNS(null, 'x', d.x.toString())
+              tspan.setAttributeNS(null, 'y', d.y.toString())
+              tspan.setAttributeNS(null, 'dy', `${idx}em`)
+
+              tspan.innerHTML = n
+
+              text.appendChild(tspan)
+            })
+          } else {
+            text.innerHTML = name[0]
+          }
 
           cir.appendChild(text)
           svgRef.current?.appendChild(cir)
