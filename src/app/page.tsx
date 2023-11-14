@@ -1,4 +1,7 @@
 import Content from "@/components/content"
+import SkillBubble from "@/components/skill-bubble"
+import { SectionHeader } from "@/components/ui/typography"
+import { skills } from "@/utils/static-data"
 import Image from "next/image"
 
 export default function Home() {
@@ -19,63 +22,17 @@ export default function Home() {
       </section>
       <hr className="w-full" />
       <section className="w-full">
-        <h1 className="text-4xl">Skill List 🧰</h1>
+        <SectionHeader>Skill List 🧰</SectionHeader>
         <div className="gap-2 flex flex-wrap balance">
-          <span>ReactJs</span>
-          <span>NextJs</span>
-          <span>Git</span>
-          <span>Nx</span>
-          <span>Ant Design</span>
-          <span>MUI</span>
-          <span>Tailwindcss</span>
-          <span>ShadCn</span>
-          <span>NodeJs</span>
-          <span>SocketIO</span>
-          <span>Prisma</span>
-          <span>ExpressJs</span>
-          <span>Postgres</span>
-          <span>Mysql</span>
-          <span>SQLite</span>
-          <span>SQL</span>
-          <span>Typescript</span>
-          <span>Redux</span>
-          <span>JoTi</span>
-          <span>Zustand</span>
-          <span>TON</span>
-          <span>Solidity</span>
-          <span>FunC</span>
-          <span>Tact</span>
-          <span>D3.js</span>
-          <span>Tanstack-Query (React-Query)</span>
-          <span>Framer-Motion</span>
-          <span>Jest</span>
-          <span>Cypress</span>
-          <span>Playwright</span>
-          <span>Vite</span>
-          <span>DevUps (managing servers and deploying applications)</span>
-          <span>Nginx</span>
-          <span>pm2</span>
-          <span>Docker</span>
-          <span>Docker Compose</span>
-          <span>Scrum</span>
-          <span>Agile</span>
-          <span>Jira</span>
-          <span>Confluence DNS management</span>
-          <span>SCSS</span>
-          <span>LESS</span>
-          <span>Styled Components</span>
-          <span>React Context</span>
-          <span>Redis</span>
-          <span>Axios</span>
-          <span>Zod</span>
-          <span>Grammy</span>
-          <span>Bun</span>
-          <span>Python</span>
+          {
+            skills.map(skill => <span key={skill.label}>{skill.label}</span>)
+          }
+          <SkillBubble />
         </div>
       </section>
       <hr className="w-full" />
       <section className="w-full">
-        <h1 className="text-4xl">Timeline</h1>
+        <SectionHeader>Timeline</SectionHeader>
       </section>
 
     </Content>
