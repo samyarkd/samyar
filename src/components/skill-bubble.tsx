@@ -1,6 +1,7 @@
 'use client'
 
-import { skills } from '@/utils/static-data'
+import useTheme from '@/utils/hooks/useTheme'
+import { TSkill, skills } from '@/utils/static-data'
 import * as d3 from 'd3'
 import { useEffect, useRef, useState } from 'react'
 import rough from "roughjs"
@@ -8,6 +9,7 @@ import rough from "roughjs"
 const SkillBubble = () => {
   const svgRef = useRef<SVGSVGElement>(null)
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
+  const theme = useTheme()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,16 +38,16 @@ const SkillBubble = () => {
           })
 
           const text = document.createElementNS("http://www.w3.org/2000/svg", 'text')
+          const name = (d.data as TSkill).label.split("-")
+          const TName = (d.data as TSkill).label.split("-")
 
           /* Adjusting font size based on circle radius */
           let fontSize
 
           if (window.innerWidth < 450) {
-            // @ts-expect-error
-            fontSize = Math.min((2 * d.r) / (d.data.label.length), 35)
+            fontSize = Math.min((2 * d.r) / (TName.sort((a, b) => b.length - a.length)[0].length), 35)
           } else {
-            // @ts-expect-error
-            fontSize = Math.min((2 * d.r) / (d.data.label.length / 2), 40)
+            fontSize = Math.min((2 * d.r) / (TName.sort((a, b) => b.length - a.length)[0].length / 2.2), 30)
           }
 
           if (fontSize < 14) {
@@ -73,15 +75,13 @@ const SkillBubble = () => {
           text.setAttributeNS(null, 'font-size', fontSize.toString())
           text.setAttributeNS(null, 'text-anchor', 'middle')
 
-          if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          if (theme.isDark) {
             text.setAttributeNS(null, 'fill', 'white')
           } else {
             text.setAttributeNS(null, 'fill', 'black')
           }
-          // @ts-expect-error
-          const name = d.data.label.split("-")
+
           if (name.length > 1) {
-            // @ts-expect-error
             name.forEach((n, idx) => {
               const tspan = document.createElementNS("http://www.w3.org/2000/svg", 'tspan')
               tspan.setAttributeNS(null, 'x', d.x.toString())
@@ -107,7 +107,7 @@ const SkillBubble = () => {
     fetchData()
   }, [])
 
-  return <svg overflow='auto' width={dimensions.width} height={dimensions.height} ref={svgRef} className='overflow-scroll' />
+  return <svg overflow='auto' width={dimensions.width} height={dimensions.height} ref={svgRef} />
 }
 
 export default SkillBubble

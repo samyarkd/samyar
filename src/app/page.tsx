@@ -1,5 +1,6 @@
 import Content from "@/components/content"
 import SkillBubble from "@/components/skill-bubble"
+import Timeline from "@/components/timeline"
 import { Description, SecondaryHeader, SectionHeader } from "@/components/ui/typography"
 import { skills } from "@/utils/static-data"
 import Image from "next/image"
@@ -17,18 +18,18 @@ export default function Home() {
         <div className="space-y-4">
           <h2 className="text-4xl">Samyar Koei - <span className="text-2xl text-gray-300">Web Dev 🕸️</span></h2>
           <p className="col-span-3">
-            Welcome to my personal blog and portfolio 👀. i&#39;m a passionate web developer who can create stunning websites using cutting-edge <strong className="text-2xl">front-end</strong> technologies. Specialized in <strong className="text-2xl">ReactJs</strong> ecosystem. I love exploring new technologies 🩸 and sharing my insights with you.</p>
+            Welcome to my personal blog and portfolio 👀. I&#39;m a passionate web developer who can create stunning websites using cutting-edge <strong className="text-2xl">front-end</strong> technologies. Specialized in <strong className="text-2xl">ReactJs</strong> ecosystem. I love exploring new technologies 🩸 and sharing my insights with you.</p>
         </div>
       </section>
       <hr className="w-full" />
       <section className="flex flex-col gap-4 w-full">
         <div>
           <SectionHeader>Skillset 🧰</SectionHeader>
-          <p>i&#39;m more skilled in Front-End side but i have a some experience in back-end development too.</p>
+          <p>I&#39;m more skilled in Front-End side but I have some experience in back-end development too.</p>
         </div>
         <div>
           <SecondaryHeader>Simple Skill list</SecondaryHeader>
-          <Description className="mb-2">The earlier the skill is mentioned the more skilled i&#39;m at it</Description>
+          <Description className="mb-2">The earlier the skill is mentioned the more skilled I&#39;m at it</Description>
           <div className="flex gap-2 flex-wrap balance">
             {
               skills.sort((a, b) => b.value - a.value).map((skill, idx) => <span key={skill.label}>{skill.label} {idx === skills.length - 1 ? '' : ' - '} </span>)
@@ -37,13 +38,15 @@ export default function Home() {
         </div>
         <div>
           <SecondaryHeader>Visualized Skill list 👀</SecondaryHeader>
-          <Description className="mb-2">The Bigger the skill is the more skilled i&#39;m at it</Description>
+          <Description className="mb-2">The Bigger the skill is the more skilled I&#39;m at it</Description>
           <SkillBubble />
         </div>
       </section>
       <hr className="w-full" />
       <section className="w-full">
         <SectionHeader>Timeline</SectionHeader>
+        <Description>I have more than 2 years of experience in the field of Front-end and also some Full-Stack skills, I have worked in one company and a product development studio.  I really like the style of this timeline :D</Description>
+        <Timeline />
       </section>
 
     </Content>
