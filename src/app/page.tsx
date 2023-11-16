@@ -8,14 +8,14 @@ import Link from "next/link"
 
 const ProjectCard = ({ project }: { project: TProject }) => {
   return (
-    <div className="card flex flex-col group shadow-lg dark:shadow-white/20 border border-solid border-gray-300 shadow-black/10 rounded-lg p-2">
-      <Image className="border border-solid border-gray-300 rounded w-full h-[200px] object-cover object-top" width={1800} height={1000} src={project.image} alt={project.name} />
+    <div className="card flex flex-col group shadow-md dark:shadow-white/10 border border-solid border-gray-300 dark:border-gray-800 shadow-black/10 rounded-lg p-2">
+      <Image className="border border-solid dark:border-gray-800 border-gray-300 rounded w-full h-[200px] object-cover object-top" width={1800} height={1000} src={project.image} alt={project.name} />
       <h3 className="text-xl font-semibold">{project.name}</h3>
       <p>{project.description}</p>
       <p className="space-x-2 mb-3">
         {project.technologies.map(t => <span className="bg-gray-400 px-1 rounded-lg text-sm" key={t}>{t}</span>)}
       </p>
-      <Link className="mt-auto group-hover:bg-gray-200 transition w-full block  text-center p-1 rounded-lg text-sm" href={project.website} target="_blank" rel="noopener noreferrer">
+      <Link className="mt-auto group-hover:bg-gray-200 transition w-full block group-hover:text-gray-800 text-center p-1 rounded-lg text-sm" href={project.website} target="_blank" rel="noopener noreferrer">
         Visit Website
       </Link>
     </div>
