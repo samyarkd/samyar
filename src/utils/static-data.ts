@@ -66,13 +66,6 @@ export const projects = [
     "image": "/challenquiz.png"
   },
   {
-    "name": "DusttreeBot",
-    "description": "A chatbot located in the bottom-right corner.",
-    "website": "https://dusttree.studio",
-    "technologies": ["Next.js", "OpenAI", "TailwindCss"],
-    "image": "/dusttree.png"
-  },
-  {
     "name": "Sinex",
     "description": "A solar panel company.",
     "website": "https://sinexenergy.com/",
@@ -87,18 +80,25 @@ export const projects = [
     "image": "/reviewai.png"
   },
   {
-    "name": "Anbarchi",
-    "description": "An online platform for buying and selling car parts.",
-    "website": "https://anbarchi.com/",
-    "technologies": ["ReactJs", "Antd"],
-    "image": "/anbar.png"
-  },
-  {
     "name": "Monshi",
     "description": "A tool to record meetings in Zoom.",
     "website": "https://app.monshi.live/login",
     "technologies": ["Blade Laravel", "CSS"],
     "image": "/monshi.png"
+  },
+  {
+    "name": "DusttreeBot",
+    "description": "A chatbot located in the bottom-right corner.",
+    "website": "https://dusttree.studio",
+    "technologies": ["Next.js", "OpenAI", "TailwindCss"],
+    "image": "/dusttree.png"
+  },
+  {
+    "name": "Anbarchi",
+    "description": "An online platform for buying and selling car parts.",
+    "website": "https://anbarchi.com/",
+    "technologies": ["ReactJs", "Antd"],
+    "image": "/anbar.png"
   },
   {
     "name": "Pomegroup",

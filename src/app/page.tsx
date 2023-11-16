@@ -56,7 +56,11 @@ export default function Home() {
           </div>
         </div>
         <div>
-          <SecondaryHeader>Visualized Skill list 👀</SecondaryHeader>
+          <SecondaryHeader>
+            <RoughNotation animate show type="highlight" animationDelay={2000} color="#ffff0030">
+              Visualized Skill list 👀
+            </RoughNotation>
+          </SecondaryHeader>
           <Description className="mb-2">The Bigger the skill is the more skilled I&#39;m at it</Description>
           <SkillBubble />
         </div>
