@@ -73,13 +73,6 @@ export const projects = [
     "image": "/dusttree.png"
   },
   {
-    "name": "Anbarchi",
-    "description": "An online platform for buying and selling car parts.",
-    "website": "https://anbarchi.com/",
-    "technologies": ["ReactJs", "Antd"],
-    "image": "/anbar.png"
-  },
-  {
     "name": "Sinex",
     "description": "A solar panel company.",
     "website": "https://sinexenergy.com/",
@@ -94,6 +87,20 @@ export const projects = [
     "image": "/reviewai.png"
   },
   {
+    "name": "Anbarchi",
+    "description": "An online platform for buying and selling car parts.",
+    "website": "https://anbarchi.com/",
+    "technologies": ["ReactJs", "Antd"],
+    "image": "/anbar.png"
+  },
+  {
+    "name": "Monshi",
+    "description": "A tool to record meetings in Zoom.",
+    "website": "https://app.monshi.live/login",
+    "technologies": ["Blade Laravel", "CSS"],
+    "image": "/monshi.png"
+  },
+  {
     "name": "Pomegroup",
     "description": "A panel for startups to buy tech or legal support packages.",
     "website": "https://expertexpat.pomegroup.studio/login",
@@ -106,13 +113,6 @@ export const projects = [
     "website": "https://app.rsoon.ir/client/login",
     "technologies": ["React.Js", "SCSS"],
     "image": "/rsoon.png"
-  },
-  {
-    "name": "Monshi",
-    "description": "A tool to record meetings in Zoom.",
-    "website": "https://app.monshi.live/login",
-    "technologies": ["Blade Laravel", "CSS"],
-    "image": "/monshi.png"
   }
 ]
 

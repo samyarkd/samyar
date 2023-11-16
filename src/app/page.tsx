@@ -5,6 +5,7 @@ import { Description, SecondaryHeader, SectionHeader } from "@/components/ui/typ
 import { TProject, projects, skills } from "@/utils/static-data"
 import Image from "next/image"
 import Link from "next/link"
+import { RoughNotation } from "react-rough-notation"
 
 const ProjectCard = ({ project }: { project: TProject }) => {
   return (
@@ -23,6 +24,7 @@ const ProjectCard = ({ project }: { project: TProject }) => {
 }
 
 export default function Home() {
+
   return (
     <Content className="flex flex-col gap-6">
       <section className="flex flex-col-reverse xs:flex-row gap-4">
@@ -33,9 +35,9 @@ export default function Home() {
           alt="Samyar Koei"
           src={'/samyar.jpg'} />
         <div className="space-y-4">
-          <h2 className="text-4xl">Samyar Koei - <span className="text-2xl text-gray-300">Web Dev 🕸️</span></h2>
+          <h2 className="text-4xl">Samyar Koei - <span className="text-2xl dark:text-gray-300 text-gray-600">Web Dev 🕸️</span></h2>
           <p className="col-span-3">
-            Welcome to my personal blog and portfolio 👀. I&#39;m a passionate web developer who can create stunning websites using cutting-edge <strong className="text-2xl">front-end</strong> technologies. Specialized in <strong className="text-2xl">ReactJs</strong> ecosystem. I love exploring new technologies 🩸 and sharing my insights with you.</p>
+            Welcome to my personal blog and portfolio 👀. I&#39;m a passionate web developer who can create stunning websites using cutting-edge <strong className="text-2xl">front-end</strong> technologies. Specialized in <RoughNotation animationDelay={1000} type="underline" animate color="red" show><strong className="text-2xl">ReactJs</strong></RoughNotation> ecosystem. I love exploring new technologies 🩸 and sharing my insights with you.</p>
         </div>
       </section>
       <hr className="w-full" />
@@ -68,6 +70,7 @@ export default function Home() {
       <hr className="w-full" />
       <section className="w-full">
         <SectionHeader>Projects</SectionHeader>
+        <Description>These are the various web development projects showcasing my expertise and skills in front-end and full-stack technologies.</Description>
         <div className="mt-4 grid xs:grid-cols-2 md:grid-cols-3 gap-y-5 gap-3 mx-auto">
           {
             projects.map((p, idx) => {
