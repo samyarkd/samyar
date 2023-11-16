@@ -5,8 +5,11 @@ const nextConfig = {
       {
         hostname: 'images.ctfassets.net',
         protocol: "https"
-
-      }
+      },
+      {
+        hostname: 'via.placeholder.com',
+        protocol: "https"
+      },
     ]
   }
 }

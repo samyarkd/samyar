@@ -27,7 +27,7 @@ export const skills = [
   { label: "D3.js", value: 75, category: "Data Visualization" },
   { label: "Tanstack-Query", value: 90, category: "Frontend" },
   { label: "Framer-Motion", value: 60, category: "Animation" },
-  { label: "Jest", value: 40, category: "Testing" },
+  { label: "Jest", value: 35, category: "Testing" },
   { label: "Cypress", value: 40, category: "Testing" },
   { label: "Playwright", value: 40, category: "Testing" },
   { label: "Vite", value: 80, category: "Build Tools" },
@@ -47,8 +47,73 @@ export const skills = [
   { label: "Zod", value: 90, category: "Validation" },
   { label: "GrammyJs", value: 100, category: "Backend" },
   { label: "Bun", value: 70, category: "Backend" },
-  { label: "Python", value: 40, category: "Languages" },
-  { label: "Webpack", value: 50, category: "Build Tools" },
+  { label: "Python", value: 30, category: "Languages" },
+  { label: "Webpack", value: 35, category: "Build Tools" },
+  { label: "RoughJs", value: 70, category: "Frontend" },
+  { label: "React-Router", value: 80, category: "Frontend" },
+  { label: "MapBox", value: 70, category: "Frontend" },
+
 ]
 
 export type TSkill = typeof skills[number]
+
+export const projects = [
+  {
+    "name": "Chellen Quiz",
+    "description": "A quiz game where you can play and win TON coin.",
+    "website": "https://challenquiz.online",
+    "technologies": ["Next.js", "Express.js", "Socket.io", "TailwindCss"],
+    "image": "/challenquiz.png"
+  },
+  {
+    "name": "DusttreeBot",
+    "description": "A chatbot located in the bottom-right corner.",
+    "website": "https://dusttree.studio",
+    "technologies": ["Next.js", "OpenAI", "TailwindCss"],
+    "image": "/dusttree.png"
+  },
+  {
+    "name": "Anbarchi",
+    "description": "An online platform for buying and selling car parts.",
+    "website": "https://anbarchi.com/",
+    "technologies": ["ReactJs", "Antd"],
+    "image": "/anbar.png"
+  },
+  {
+    "name": "Sinex",
+    "description": "A solar panel company.",
+    "website": "https://sinexenergy.com/",
+    "technologies": ["Next.Js", "TailwindCss"],
+    "image": "/sinex.png"
+  },
+  {
+    "name": "RevewAi",
+    "description": "An AI-powered platform for managing contracts.",
+    "website": "https://reviewai.online/",
+    "technologies": ["Next.js", "Antd"],
+    "image": "/reviewai.png"
+  },
+  {
+    "name": "Pomegroup",
+    "description": "A panel for startups to buy tech or legal support packages.",
+    "website": "https://expertexpat.pomegroup.studio/login",
+    "technologies": ["React.Js", "CoreUi"],
+    "image": "/exp.png"
+  },
+  {
+    "name": "Rsoon",
+    "description": "An app for investing in stocks.",
+    "website": "https://app.rsoon.ir/client/login",
+    "technologies": ["React.Js", "SCSS"],
+    "image": "/rsoon.png"
+  },
+  {
+    "name": "Monshi",
+    "description": "A tool to record meetings in Zoom.",
+    "website": "https://app.monshi.live/login",
+    "technologies": ["Blade Laravel", "CSS"],
+    "image": "/monshi.png"
+  }
+]
+
+export type TProject = typeof projects[number]
