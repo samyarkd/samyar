@@ -123,7 +123,7 @@ const Timeline = () => {
     }
 
     fetchData()
-  }, [])
+  }, [theme.theme])
 
   return <svg className="rounded overflow-hidden" overflow='auto' width={dimensions.width} height={dimensions.height} ref={svgRef} />
 }

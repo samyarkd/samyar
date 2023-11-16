@@ -12,6 +12,9 @@ const SkillBubble = () => {
   const theme = useTheme()
 
   useEffect(() => {
+    if (svgRef.current) {
+      svgRef.current.innerHTML = ''
+    }
     const fetchData = async () => {
       try {
         const margin = 1 // to avoid clipping the root circle stroke
@@ -105,7 +108,7 @@ const SkillBubble = () => {
     }
 
     fetchData()
-  }, [])
+  }, [theme.theme])
 
   return <svg overflow='auto' width={dimensions.width} height={dimensions.height} ref={svgRef} />
 }

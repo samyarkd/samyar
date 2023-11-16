@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 import { MobileMenu } from '@/components/layouts/mobile-menu'
+import Providers from '@/components/providers'
 import BlogTransition from '@/components/transition'
 import clsx from 'clsx'
 import localFont from 'next/font/local'
@@ -43,7 +44,9 @@ export default function RootLayout({
         </header>
 
         <BlogTransition>
-          {children}
+          <Providers>
+            {children}
+          </Providers>
         </BlogTransition>
 
       </body>
