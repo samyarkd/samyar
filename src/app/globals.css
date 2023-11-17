@@ -34,3 +34,8 @@ body {
 *::before {
   font-family: inherit;
 }
+
+
+table {
+  @apply table-auto
+}

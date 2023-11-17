@@ -11,14 +11,16 @@
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.19.0",
     "@types/d3": "^7.4.3",
+    "@types/react-syntax-highlighter": "^15.5.10",
     "clsx": "^2.0.0",
     "contentful": "^10.6.5",
     "d3": "^7.8.5",
     "framer-motion": "^10.16.4",
-    "next": "14.0.2",
+    "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
     "react-rough-notation": "^1.0.5",
+    "react-syntax-highlighter": "^15.5.0",
     "roughjs": "^4.6.5"
   },
   "devDependencies": {
