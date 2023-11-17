@@ -13,19 +13,21 @@ const Blog = async () => {
   return (
     <div className="flex flex-col space-y-10 max-w-xl mx-auto">
       {
-        blogPosts?.map(p => <Link className="border p-2 rounded border-solid border-gray-300 group/item" href={`/blog/${p.sys.id}/${p.fields.slug as string}`} key={p.sys.id}>
-          <h2><strong className="group-hover/item:underline">{p.fields.title as string}</strong></h2>
-          <p>{p.fields.description as string} <span className="hidden animate-pulse group-hover/item:inline text-gray-400">read more...</span></p>
-          {
-            (p.fields as any).thumbnail &&
-            <Image
-              alt={(p.fields as any).thumbnail?.fields?.title}
-              src={'https:' + (p.fields as any).thumbnail?.fields?.file?.url}
-              width={(p.fields as any).thumbnail?.fields?.file?.details?.image?.width}
-              height={(p.fields as any).thumbnail?.fields?.file?.details?.image?.height}
-              className="rounded mx-auto w-full mt-1"
-            />
-          }
+        blogPosts?.map(p => <Link className="border p-2 space-y-4 rounded border-solid border-gray-300 group/item" href={`/blog/${p.sys.id}/${p.fields.slug as string}`} key={p.sys.id}>
+          <h2 className="font-semibold antialiased text-3xl group-hover/item:underline">{p.fields.title as string}</h2>
+          <div>
+            <p>{p.fields.description as string} <span className="hidden animate-pulse group-hover/item:inline text-gray-400">read more...</span></p>
+            {
+              (p.fields as any).thumbnail &&
+              <Image
+                alt={(p.fields as any).thumbnail?.fields?.title}
+                src={'https:' + (p.fields as any).thumbnail?.fields?.file?.url}
+                width={(p.fields as any).thumbnail?.fields?.file?.details?.image?.width}
+                height={(p.fields as any).thumbnail?.fields?.file?.details?.image?.height}
+                className="rounded mx-auto w-full mt-1"
+              />
+            }
+          </div>
         </Link>
         )
       }
