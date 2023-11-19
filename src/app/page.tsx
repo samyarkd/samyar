@@ -32,10 +32,10 @@ export default function Home() {
           className="w-full mx-auto object-cover object-center shadow-xl dark:shadow-white/20 shadow-black/10 max-w-xs xs:w-1/4 rounded-lg"
           width={620}
           height={620}
-          alt="Samyar Koei"
+          alt="Samyarkd"
           src={'/samyar.jpg'} />
         <div className="space-y-4">
-          <h2 className="text-4xl">Samyar Koei - <span className="text-2xl dark:text-gray-300 text-gray-600">Web Dev 🕸️</span></h2>
+          <h2 className="text-4xl">Samyar - <span className="text-2xl dark:text-gray-300 text-gray-600">Web Dev 🕸️</span></h2>
           <p className="col-span-3">
             Welcome to my personal blog and portfolio 👀. I&#39;m a passionate web developer who can create stunning websites using cutting-edge <strong className="text-2xl">front-end</strong> technologies. Specialized in <RoughNotation animationDelay={1000} type="underline" animate color="red" show><strong className="text-2xl">ReactJs</strong></RoughNotation> ecosystem. I love exploring new technologies 🩸 and sharing my insights with you.</p>
         </div>
