@@ -21,7 +21,7 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "",
+      mediaRoot: "uploads",
       publicFolder: "public",
     },
   },
@@ -33,6 +33,18 @@ export default defineConfig({
         label: "Posts",
         path: "content/posts",
         fields: [
+          {
+            name: 'hero',
+            type: 'image',
+            label: 'Hero Image',
+
+          },
+          {
+            type: "string",
+            name: "description",
+            label: "Description",
+            required: true,
+          },
           {
             type: "string",
             name: "title",
