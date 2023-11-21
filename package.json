@@ -3,10 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c \"next dev\"",
+    "dev": "tinacms dev -c \"next dev\"",
     "build": "tinacms build && next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "tinacms build && next start"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.19.0",
