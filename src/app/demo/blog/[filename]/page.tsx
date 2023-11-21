@@ -2,6 +2,7 @@
 // @ts-nocheck
 // This is a demo file once you have tina setup feel free to delete this file
 
+// @ts-ignore
 import client from '@/../tina/__generated__/client'
 import BlogPage from '@/components/blogPage'
 
