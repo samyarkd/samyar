@@ -45,43 +45,6 @@ const BlogPage = (props: {
       <hr />
       <article className="prose-base sm:prose-lg">
         <TinaMarkdown components={components} content={data.post.body} />
-        {/* {documentToReactComponents(fields.body, {
-        preserveWhitespace: false,
-        renderNode: {
-          [BLOCKS.PARAGRAPH]: (node: any, children: any) => {
-            if (node.content.some((n: any) => n.nodeType === "embedded-entry-inline")) {
-              return <>{children}</>
-            }
-            return <p>{node?.content[0]?.value}</p>
-          },
-          'embedded-asset-block': (node: any) => {
-            return <Image {...getImageProps(node?.data?.target)} />
-          },
-          "embedded-entry-inline": (node: any) => {
-            const target = node?.data?.target
-            if (target?.sys?.contentType?.sys?.id === 'codeBlock') {
-              return <SyntaxHighlighter
-                language={target?.fields?.lang}
-                style={dracula}>
-                {target?.fields?.code}
-              </SyntaxHighlighter>
-            }
-
-            return <Link
-              className="hover:underline text-blue-500"
-              href={`/blog/${target?.sys?.id}/${target?.fields?.slug}`}>
-              {target?.fields?.title}
-            </Link>
-          },
-          "hyperlink": (node: any) => {
-            return <Link
-              className="hover:underline text-blue-500"
-              href={node?.data?.uri} target="_blank" rel="noopener noreferrer">
-              {node?.content[0]?.value}
-            </Link>
-          },
-        },
-      })} */}
       </article>
     </div>)
 }
