@@ -6,7 +6,7 @@
 import client from '@/../tina/__generated__/client'
 import BlogPage from '@/components/blogPage'
 
-const Page = async () => {
+const Page = async ({ params }) => {
   let data = {}
   let query = {}
   let variables = { relativePath: `${params.filename}.md` }
