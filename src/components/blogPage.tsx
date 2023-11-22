@@ -1,16 +1,13 @@
-'use client'
 import clsx from 'clsx'
 import { Crete_Round } from 'next/font/google'
 import Image from 'next/image'
-import { useTina } from 'tinacms/dist/react'
 import { TinaMarkdown } from 'tinacms/dist/rich-text'
+import { PostQuery } from '../../tina/__generated__/types'
 
 const ArticleFont = Crete_Round({
   weight: "400",
   subsets: ["latin"]
 })
-
-// Extracted a function to get the entry fields
 
 // Extracted a function to get the image props
 const getImageProps = (image: string, alt: string) => ({
@@ -21,30 +18,23 @@ const getImageProps = (image: string, alt: string) => ({
   className: "rounded mx-auto w-full"
 })
 
-const BlogPage = (props: {
-  query: any,
-  variables: any,
-  data: any,
-}) => {
-  const { data } = useTina({
-    query: props.query,
-    variables: props.variables,
-    data: props.data,
-  })
+const BlogPage = async (props: PostQuery) => {
+  const post = props.post
 
   return (
-    <div className={clsx("max-w-xl mx-auto flex flex-col space-y-5", ArticleFont.className)}>
+    <div className={clsx("max-w-xl w-full mx-auto flex flex-col space-y-5", ArticleFont.className)}>
       <div className="space-y-2">
-        <h1 className="text-3xl sm:text-5xl">{data.post.title}</h1>
-        <p className="text-sm sm:text-base">{data.post?.description}</p>
+        <time className='text-sm font-sans dark:text-slate-400 text-slate-600' >{new Date(post.date).toDateString()}</time>
+        <h1 className="text-3xl sm:text-5xl">{post.title}</h1>
+        <p className="text-sm sm:text-base">{post?.description}</p>
         {
-          data.post?.hero &&
-          <Image {...getImageProps(data.post.hero, data.post.title)} />
+          post?.hero &&
+          <Image {...getImageProps(post.hero, post.title)} />
         }
       </div>
       <hr />
       <article className="prose-base sm:prose-lg">
-        <TinaMarkdown components={components} content={data.post.body} />
+        <TinaMarkdown components={components} content={post.body} />
       </article>
     </div>)
 }

@@ -1,51 +1,41 @@
-
-// @ts-ignore
-import client from '@/../tina/__generated__/client'
 import BlogPage from '@/components/blogPage'
+import { FetchPostParams, fetchPost } from '@/utils/tina'
 import { Metadata } from 'next'
 
-type Params = { filename: string }
+/**
+ * Generate metadata for a post
+ * @param params - The parameters for fetching the post
+ * @returns The generated metadata
+ */
+export async function generateMetadata({ params }: { params: FetchPostParams }): Promise<Metadata> {
+  const response = await fetchPost(params)
 
-export async function generateMetadata(
-  { params }: { params: Params },
-): Promise<Metadata> {
-  const response = await fetchEntry(params)
-
-  if (!response) return {
-    title: 'not found'
-  }
-
-  const images = () => {
-    if (response.data.post?.hero) {
-      return [response.data.post?.hero]
-    } else {
-      return []
+  if (!response) {
+    return {
+      title: 'not found'
     }
   }
+
+  const images = response.data.post?.hero ? [response.data.post.hero] : []
 
   return {
     title: response.data.post.title,
     description: response.data.post?.description,
     openGraph: {
-      images: [...(images())],
+      images: [...images],
     },
   }
 }
 
-const Page = async ({ params }: { params: Params }) => {
-  const response = await fetchEntry(params)
+const Page = async ({ params }: { params: FetchPostParams }) => {
+  const response = await fetchPost(params)
 
   return (
-    <BlogPage {...response} />
+    <BlogPage post={response.data.post} />
   )
 }
 
 export default Page
-
+// Don't cache
 export const revalidate = 0
 
-async function fetchEntry(params: Params) {
-  let variables = { relativePath: `${params.filename}.md` }
-  const res = await client.queries.post(variables)
-  return res
-}

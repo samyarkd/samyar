@@ -33,10 +33,11 @@ export default defineConfig({
         path: "content/posts",
         fields: [
           {
-            name: 'hero',
-            type: 'image',
-            label: 'Hero Image',
-
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
           },
           {
             type: "string",
@@ -45,11 +46,10 @@ export default defineConfig({
             required: true,
           },
           {
-            type: "string",
-            name: "title",
-            label: "Title",
-            isTitle: true,
-            required: true,
+            name: 'hero',
+            type: 'image',
+            label: 'Hero Image',
+
           },
           {
             type: "rich-text",
@@ -57,7 +57,48 @@ export default defineConfig({
             label: "Body",
             isBody: true,
           },
+          {
+            type: "datetime",
+            name: "date",
+            label: "Date",
+            indexed: true,
+            required: true
+          },
+          {
+            label: 'Category',
+            name: 'category',
+            type: 'string',
+            options: [
+              {
+                value: 'anime',
+                label: 'Anime',
+              },
+              {
+                value: 'coding',
+                label: 'Coding',
+              },
+              {
+                value: "life",
+                label: "Life",
+              },
+              {
+                value: 'book',
+                label: "Book",
+              },
+              {
+                value: 'science',
+                label: "Science",
+              }
+            ]
+          }
         ],
+        indexes: [{
+          name: "category-date",
+          fields: [
+            { name: "category" },
+            { name: "date" }
+          ]
+        }],
         ui: {
           // This is an DEMO router. You can remove this to fit your site
           router: ({ document }) => `/blog/${document._sys.filename}`,
