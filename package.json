@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "tinacms dev -c \"next dev\"",
+    "dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c \"next dev\"",
     "build": "tinacms build && next build",
-    "start": "tinacms build && next start"
+    "start": "next start"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.19.0",
@@ -20,20 +20,20 @@
     "react-dom": "^18",
     "react-rough-notation": "^1.0.5",
     "react-syntax-highlighter": "^15.5.0",
-    "roughjs": "^4.6.5",
-    "tinacms": "^1.5.24"
+    "roughjs": "^4.6.6",
+    "tinacms": "^1.5.26"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
-    "@tinacms/cli": "^1.5.34",
+    "@tinacms/cli": "^1.5.36",
     "@types/node": "^20.9.3",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
+    "autoprefixer": "^10",
     "eslint": "^8",
     "eslint-config-next": "14.0.1",
     "postcss": "^8",
-    "tailwindcss": "^3.3.0",
+    "tailwindcss": "^3.3.5",
     "typescript": "^5"
   }
 }
