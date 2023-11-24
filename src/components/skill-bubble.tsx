@@ -3,21 +3,25 @@ import * as d3 from 'd3'
 import { JSDOM } from 'jsdom'
 import { memo } from 'react'
 import rough from 'roughjs'
+import ThemedSVG from './themed-svg'
+// TODO: make the svg so that it will be rendred in 3 sizes (sm, md, lg)
 
 const document = new JSDOM().window.document
 
 const SkillBubble = ({ skills }: { skills: TSkill[] }) => {
   const svgWidth = 900
   const svgHeight = 750
-  const svgRef = JSDOM.fragment(
-    `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 ${svgWidth} ${svgHeight}" width="100%" height="100%" overflow="auto"></svg>`
-  ).firstChild as SVGSVGElement
 
-  if (!svgRef) {
-    return <h1>SVG was not found</h1>
-  }
+  function getBubbleHtml(isDark: boolean) {
+    const svgRef = JSDOM.fragment(
+      `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 ${svgWidth} ${svgHeight}" width="100%" height="100%" overflow="auto"></svg>`
+    ).firstChild as SVGSVGElement
 
-  try {
+    if (!svgRef) {
+      return ''
+    }
+
+    const themeColor = isDark ? 'white' : 'black'
     const margin = 1 // to avoid clipping the root circle stroke
     const color = d3.scaleOrdinal(d3.schemeTableau10)
 
@@ -41,7 +45,6 @@ const SkillBubble = ({ skills }: { skills: TSkill[] }) => {
     root.leaves().forEach((d) => {
       const cir = rc.circle(d.x, d.y, d.r * 2 - 2, {
         // @ts-expect-error
-
         stroke: color(d.data.category)
       })
 
@@ -83,7 +86,7 @@ const SkillBubble = ({ skills }: { skills: TSkill[] }) => {
       text.setAttributeNS(null, 'font-size', fontSize.toString())
       text.setAttributeNS(null, 'text-anchor', 'middle')
 
-      text.setAttributeNS(null, 'fill', 'white')
+      text.setAttributeNS(null, 'fill', themeColor)
 
       if (name.length > 1) {
         name.forEach((n, idx) => {
@@ -106,11 +109,11 @@ const SkillBubble = ({ skills }: { skills: TSkill[] }) => {
       cir.appendChild(text)
       svgRef?.appendChild(cir)
     })
-  } catch (error) {
-    console.error('Error:', error)
+
+    return svgRef.outerHTML
   }
 
-  return <div dangerouslySetInnerHTML={{ __html: svgRef.outerHTML }} />
+  return <ThemedSVG dark={getBubbleHtml(true)} light={getBubbleHtml(false)} />
 }
 
 // we will use the cached one if the skill data has not changed
