@@ -1,9 +1,12 @@
 'use client'
 
-import { useRouter } from "next/navigation"
-import { PageInfo } from "../../tina/__generated__/types"
+import { useRouter } from 'next/navigation'
+import { type PageInfo } from '../../tina/__generated__/types'
 
-const BlogsNavigation = ({ pageInfo, current }: {
+const BlogsNavigation = ({
+  pageInfo,
+  current
+}: {
   pageInfo: PageInfo
   current: number
 }) => {
@@ -13,24 +16,27 @@ const BlogsNavigation = ({ pageInfo, current }: {
     <div>
       <hr />
       <button
-        onClick={
-          () => {
-            navigation.push(`/blog?page=${current + 1}&cursor=${pageInfo.startCursor}`)
-          }
-        }
+        onClick={() => {
+          navigation.push(
+            `/blog?page=${current + 1}&cursor=${pageInfo.startCursor}`
+          )
+        }}
         className="disabled:cursor-not-allowed"
-
-        disabled={!pageInfo.hasNextPage}>Next</button>
+        disabled={!pageInfo.hasNextPage}>
+        Next
+      </button>
 
       <hr />
       <button
-        onClick={
-          () => {
-            navigation.push(`/blog?page=${current - 1}&cursor=${pageInfo.endCursor}`)
-          }
-        }
+        onClick={() => {
+          navigation.push(
+            `/blog?page=${current - 1}&cursor=${pageInfo.endCursor}`
+          )
+        }}
         className="disabled:cursor-not-allowed"
-        disabled={pageInfo.endCursor === null}>Prev</button>
+        disabled={pageInfo.endCursor === null}>
+        Prev
+      </button>
     </div>
   )
 }

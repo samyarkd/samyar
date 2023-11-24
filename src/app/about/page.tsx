@@ -1,9 +1,7 @@
-import Content from "@/components/content"
+import Content from '@/components/content'
 
 const About = () => {
-  return (
-    <Content>About</Content>
-  )
+  return <Content>About</Content>
 }
 
 export default About

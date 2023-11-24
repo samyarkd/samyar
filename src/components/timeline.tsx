@@ -1,8 +1,8 @@
 'use client'
 
-import useTheme from "@/utils/hooks/useTheme"
-import { useEffect, useRef, useState } from "react"
-import rough from "roughjs"
+import useTheme from '@/utils/hooks/useTheme'
+import { useEffect, useRef, useState } from 'react'
+import rough from 'roughjs'
 
 const Timeline = () => {
   const svgRef = useRef<SVGSVGElement>(null)
@@ -10,7 +10,7 @@ const Timeline = () => {
   const theme = useTheme()
 
   useEffect(() => {
-    const svgWidth = svgRef.current?.parentElement?.clientWidth || 960
+    const svgWidth = svgRef.current?.parentElement?.clientWidth ?? 960
     const svgHeight = 300
 
     setDimensions({ width: svgWidth, height: svgHeight })
@@ -18,8 +18,10 @@ const Timeline = () => {
     const fetchData = async () => {
       if (svgRef.current) {
         svgRef.current.innerHTML = ''
+      } else {
+        return
       }
-      const rc = rough.svg(svgRef.current!)
+      const rc = rough.svg(svgRef.current)
 
       const themeColor = theme.isDark ? 'white' : 'black'
 
@@ -58,13 +60,19 @@ const Timeline = () => {
         fillStyle: 'solid'
       })
 
-      const title = document.createElementNS('http://www.w3.org/2000/svg', 'text')
-      let text = "Front-end developer at Tafarda"
+      const title = document.createElementNS(
+        'http://www.w3.org/2000/svg',
+        'text'
+      )
+      let text = 'Front-end developer at Tafarda'
       title.setAttributeNS(null, 'x', baseCol.toString())
       title.setAttributeNS(null, 'y', '150')
       title.setAttributeNS(null, 'text-anchor', 'middle')
       text.split(' ').map((t, idx) => {
-        const span = document.createElementNS('http://www.w3.org/2000/svg', 'tspan')
+        const span = document.createElementNS(
+          'http://www.w3.org/2000/svg',
+          'tspan'
+        )
         span.innerHTML = t
         span.setAttributeNS(null, 'dy', (idx - 1).toString() + 'em')
         span.setAttributeNS(null, 'font-size', '16px')
@@ -74,22 +82,29 @@ const Timeline = () => {
         title.appendChild(span)
       })
 
-      const year = document.createElementNS('http://www.w3.org/2000/svg', 'text')
-      year.innerHTML = "2021 - 2022"
+      const year = document.createElementNS(
+        'http://www.w3.org/2000/svg',
+        'text'
+      )
+      year.innerHTML = '2021 - 2022'
       year.setAttributeNS(null, 'x', baseCol.toString())
       year.setAttributeNS(null, 'y', '230')
       year.setAttributeNS(null, 'text-anchor', 'middle')
       year.setAttributeNS(null, 'fill', themeColor)
 
-
-
-      const title2 = document.createElementNS('http://www.w3.org/2000/svg', 'text')
-      text = "Front-end developer at DMTBox Studio"
+      const title2 = document.createElementNS(
+        'http://www.w3.org/2000/svg',
+        'text'
+      )
+      text = 'Front-end developer at DMTBox Studio'
       title2.setAttributeNS(null, 'x', (baseCol * 3).toString())
       title2.setAttributeNS(null, 'y', '150')
       title2.setAttributeNS(null, 'text-anchor', 'middle')
       text.split(' ').map((t, idx) => {
-        const span = document.createElementNS('http://www.w3.org/2000/svg', 'tspan')
+        const span = document.createElementNS(
+          'http://www.w3.org/2000/svg',
+          'tspan'
+        )
         span.innerHTML = t
         span.setAttributeNS(null, 'dy', (idx - 1.5).toString() + 'em')
         span.setAttributeNS(null, 'x', (baseCol * 3).toString())
@@ -99,13 +114,15 @@ const Timeline = () => {
         title2.appendChild(span)
       })
 
-      const year2 = document.createElementNS('http://www.w3.org/2000/svg', 'text')
-      year2.innerHTML = "2022 - now"
+      const year2 = document.createElementNS(
+        'http://www.w3.org/2000/svg',
+        'text'
+      )
+      year2.innerHTML = '2022 - now'
       year2.setAttributeNS(null, 'x', (baseCol * 3).toString())
       year2.setAttributeNS(null, 'y', '230')
       year2.setAttributeNS(null, 'text-anchor', 'middle')
       year2.setAttributeNS(null, 'fill', themeColor)
-
 
       cr.appendChild(title)
       cr2.appendChild(title2)
@@ -122,10 +139,18 @@ const Timeline = () => {
       svgRef.current?.appendChild(year)
     }
 
-    fetchData()
+    void fetchData()
   }, [theme.theme])
 
-  return <svg className="rounded overflow-hidden" overflow='auto' width={dimensions.width} height={dimensions.height} ref={svgRef} />
+  return (
+    <svg
+      className="rounded overflow-hidden"
+      overflow="auto"
+      width={dimensions.width}
+      height={dimensions.height}
+      ref={svgRef}
+    />
+  )
 }
 
 export default Timeline

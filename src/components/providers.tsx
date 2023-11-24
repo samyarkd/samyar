@@ -1,11 +1,9 @@
 'use client'
 
-import { ReactNode } from "react"
+import { type ReactNode } from 'react'
 
 const Providers = ({ children }: { children: ReactNode }) => {
-  return (
-    <>{children}</>
-  )
+  return <>{children}</>
 }
 
 export default Providers

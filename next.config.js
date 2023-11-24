@@ -4,12 +4,12 @@ const nextConfig = {
     remotePatterns: [
       {
         hostname: 'images.ctfassets.net',
-        protocol: "https"
+        protocol: 'https'
       },
       {
         hostname: 'assets.tina.io',
-        protocol: "https"
-      },
+        protocol: 'https'
+      }
     ]
   }
 }

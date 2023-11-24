@@ -6,9 +6,7 @@ const useTheme = () => {
   const [theme, setTheme] = useState<'light' | 'dark' | ''>('')
 
   useEffect(() => {
-    if (
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       setIsDark(true)
       setTheme('dark')
     } else {
@@ -16,8 +14,7 @@ const useTheme = () => {
       setTheme('light')
     }
 
-    return () => {
-    }
+    return () => {}
   }, [])
 
   return { isDark, isLight, theme }
