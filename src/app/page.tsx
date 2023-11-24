@@ -62,15 +62,15 @@ export default function Home() {
           <p className="col-span-3">
             Welcome to my personal blog and portfolio 👀. I&#39;m a passionate
             web developer who can create stunning websites using cutting-edge{' '}
-            <strong className="text-2xl">front-end</strong> technologies.
-            Specialized in{' '}
+            <strong className="text-lg md:text-2xl">front-end</strong>{' '}
+            technologies. Specialized in{' '}
             <RoughNotation
               animationDelay={1000}
               type="underline"
               animate
               color="red"
               show>
-              <strong className="text-2xl">ReactJs</strong>
+              <strong className="text-lg md:text-2xl">ReactJs</strong>
             </RoughNotation>{' '}
             ecosystem. I love exploring new technologies 🩸 and sharing my
             insights with you.

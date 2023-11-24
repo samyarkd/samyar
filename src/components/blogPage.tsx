@@ -36,7 +36,7 @@ const BlogPage = async (props: PostQuery) => {
         {post?.hero && <Image {...getImageProps(post.hero, post.title)} />}
       </div>
       <hr />
-      <article className="prose-base sm:prose-lg">
+      <article className="prose prose-base md:prose-lg">
         <TinaMarkdown components={components} content={post.body} />
       </article>
     </div>

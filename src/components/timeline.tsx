@@ -106,7 +106,7 @@ const Timeline = () => {
     })
 
     const year2 = document.createElementNS('http://www.w3.org/2000/svg', 'text')
-    year2.innerHTML = '2022 - now'
+    year2.innerHTML = '2022 - Present'
     year2.setAttributeNS(null, 'x', (baseCol * 3).toString())
     year2.setAttributeNS(null, 'y', '230')
     year2.setAttributeNS(null, 'text-anchor', 'middle')
