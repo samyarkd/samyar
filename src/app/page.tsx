@@ -115,7 +115,7 @@ export default function Home() {
           <Description className="mb-2">
             The Bigger the skill is the more skilled I&#39;m at it
           </Description>
-          <SkillBubble />
+          <SkillBubble skills={skills} />
         </div>
       </section>
       <hr className="w-full" />
