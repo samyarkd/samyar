@@ -1,7 +1,9 @@
 import clsx from 'clsx'
 import { Crete_Round } from 'next/font/google'
 import Image from 'next/image'
-import { TinaMarkdown } from 'tinacms/dist/rich-text'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import { TinaMarkdown, type Components } from 'tinacms/dist/rich-text'
 import { type PostQuery } from '../../tina/__generated__/types'
 
 const ArticleFont = Crete_Round({
@@ -54,6 +56,31 @@ const PageSection = (props: any) => {
   )
 }
 
-const components = {
-  PageSection
+const components: Components<any> = {
+  PageSection,
+  h2: (props: any) => {
+    try {
+      return (
+        <h2 className="dark:text-white text-zinc-900">
+          {props.children.props.content[0].text}
+        </h2>
+      )
+    } catch (error) {
+      return (
+        <h2 className="dark:text-white text-zinc-900">
+          There was an error while parsin the title
+        </h2>
+      )
+    }
+  },
+
+  code_block: (props: any) => {
+    console.log(props)
+
+    return (
+      <SyntaxHighlighter language={props.lang} style={dracula}>
+        {props.value}
+      </SyntaxHighlighter>
+    )
+  }
 }
