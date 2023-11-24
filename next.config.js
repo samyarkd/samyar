@@ -7,7 +7,7 @@ const nextConfig = {
         protocol: "https"
       },
       {
-        hostname: 'via.placeholder.com',
+        hostname: 'assets.tina.io',
         protocol: "https"
       },
     ]
