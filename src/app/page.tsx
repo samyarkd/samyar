@@ -43,7 +43,7 @@ const ProjectCard = ({ project }: { project: TProject }) => {
         className={`card gap-4 flex h-full flex-col group p-2 backdrop-blur`}>
         <RoughNotation type="underline" color={color} show>
           <Image
-            className="border border-solid dark:border-gray-800 border-gray-300 rounded-large w-full h-[200px] object-cover object-top"
+            className="border border-solid dark:border-gray-800 border-gray-300 rounded w-full h-[200px] object-cover object-top"
             width={1800}
             height={1000}
             src={project.image}

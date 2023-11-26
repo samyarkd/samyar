@@ -3,7 +3,6 @@ import './globals.css'
 
 import { MobileMenu } from '@/components/layouts/mobile-menu'
 import Providers from '@/components/providers'
-import ThreeDBackground from '@/components/threeDBackground'
 import BlogTransition from '@/components/transition'
 import clsx from 'clsx'
 import localFont from 'next/font/local'
@@ -29,31 +28,29 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={clsx(PatrickHandSC.className, 'relative min-h-screen')}>
-        <ThreeDBackground>
-          <Providers>
-            <header className="max-w-5xl flex items-baseline mx-auto p-4">
-              <Link href="/" className={clsx(Agbalumo.className, 'text-2xl')}>
-                Samyar
+        <Providers>
+          <header className="max-w-5xl flex items-baseline mx-auto p-4">
+            <Link href="/" className={clsx(Agbalumo.className, 'text-2xl')}>
+              Samyar
+            </Link>
+
+            <MobileMenu />
+
+            <ul className="hidden ms-auto sm:flex gap-8 sm:items-baseline">
+              <Link href="/blog" className={clsx('text-lg')}>
+                Blog
               </Link>
+              <Link href="/contact" className={clsx('text-lg')}>
+                Contact
+              </Link>
+              <Link href="/about" className={clsx('text-lg')}>
+                About
+              </Link>
+            </ul>
+          </header>
 
-              <MobileMenu />
-
-              <ul className="hidden ms-auto sm:flex gap-8 sm:items-baseline">
-                <Link href="/blog" className={clsx('text-lg')}>
-                  Blog
-                </Link>
-                <Link href="/contact" className={clsx('text-lg')}>
-                  Contact
-                </Link>
-                <Link href="/about" className={clsx('text-lg')}>
-                  About
-                </Link>
-              </ul>
-            </header>
-
-            <BlogTransition>{children}</BlogTransition>
-          </Providers>
-        </ThreeDBackground>
+          <BlogTransition>{children}</BlogTransition>
+        </Providers>
       </body>
     </html>
   )

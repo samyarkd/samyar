@@ -5,7 +5,7 @@
 :root {
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: rgba(24,44,79,1);
-  --background-end-rgb: rgb(68,108,179);
+  --background-end-rgb: rgb(14, 64, 152);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -19,7 +19,7 @@
 html {
   color: rgb(var(--foreground-rgb));
   background: var(--background-end-rgb);
-  background: linear-gradient(0, var(--background-start-rgb) 0%, rgba(8,10,50,1) 15%, rgba(2,0,36,1) 39%, var(--background-end-rgb) 100%);}
+  background: linear-gradient(0, var(--background-start-rgb) 0%, rgba(2,0,36,1) 75%, var(--background-end-rgb) 100%);}
 
 .bg-body {
   background: linear-gradient(
