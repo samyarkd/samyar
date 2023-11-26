@@ -30,3 +30,24 @@ table {
 p, h1, h2, h3,h4,h5,h6, span {
   @apply backdrop-blur
 }
+
+.back-in-up {
+  animation: back-in-up-animation 1s ease-in-out 0s 1 normal both running;
+}
+
+@keyframes back-in-up-animation {
+  0% {
+      transform: translate(0px, 1200px) scale(0.7);
+      opacity: 0.7;
+  }
+
+  80% {
+      transform: translate(0px, 0px) scale(0.7);
+      opacity: 0.7;
+  }
+
+  100% {
+      transform: translate(0px, 0px) scale(1);
+      opacity: 1;
+  }
+}

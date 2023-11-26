@@ -78,7 +78,7 @@ export default function Home() {
     <Content className="flex flex-col gap-6">
       <section className="flex flex-col-reverse xs:flex-row gap-4">
         <Image
-          className="w-full md:min-w-[225px] mx-auto object-cover object-center shadow-xl dark:shadow-white/20 shadow-black/10 max-w-xs xs:w-1/4 rounded-lg"
+          className="back-in-up w-full md:min-w-[225px] mx-auto object-cover object-center shadow-xl dark:shadow-white/20 shadow-black/10 hidden xs:block max-w-xs xs:w-1/4 rounded-lg "
           width={620}
           height={620}
           alt="Samyarkd"
