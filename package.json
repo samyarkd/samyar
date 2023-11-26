@@ -10,11 +10,15 @@
     "lint:fix": "eslint --fix './src/**/*.{ts,tsx}'"
   },
   "dependencies": {
+    "@react-three/drei": "^9.88.17",
+    "@react-three/fiber": "^8.15.11",
     "@types/d3": "^7.4.3",
+    "@types/three": "^0.158.3",
     "clsx": "^2.0.0",
     "d3": "^7.8.5",
     "framer-motion": "^10.16.4",
     "jsdom": "^22.1.0",
+    "maath": "^0.10.4",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
@@ -22,6 +26,7 @@
     "react-syntax-highlighter": "^15.5.0",
     "roughjs": "^4.6.6",
     "sharp": "^0.32.6",
+    "three": "^0.158.0",
     "tinacms": "^1.5.26"
   },
   "devDependencies": {

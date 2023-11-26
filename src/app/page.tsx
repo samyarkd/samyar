@@ -39,7 +39,8 @@ const ProjectCard = ({ project }: { project: TProject }) => {
 
   return (
     <RoughNotation type="box" color={color} show>
-      <div className={`card gap-4 flex h-full flex-col group p-2`}>
+      <div
+        className={`card gap-4 flex h-full flex-col group p-2 backdrop-blur`}>
         <RoughNotation type="underline" color={color} show>
           <Image
             className="border border-solid dark:border-gray-800 border-gray-300 rounded-large w-full h-[200px] object-cover object-top"
