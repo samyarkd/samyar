@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c \"next dev\"",
+    "dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c \"next dev -p 3001\"",
     "build": "tinacms build && next build",
     "start": "next start",
     "lint": "eslint .",
@@ -16,7 +16,7 @@
     "@types/three": "^0.158.3",
     "clsx": "^2.0.0",
     "d3": "^7.8.5",
-    "framer-motion": "^10.16.4",
+    "framer-motion": "^10.16.5",
     "jsdom": "^22.1.0",
     "maath": "^0.10.4",
     "next": "14.0.3",
