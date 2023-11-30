@@ -110,7 +110,7 @@ export default function Home() {
                 Web Dev 🕸️
               </span>
             </h2>
-            <p className="col-span-3">
+            <p className="col-span-3 max-w-sm">
               Welcome to my personal blog and portfolio 👀. I&#39;m a web
               developer who can create stunning websites using cutting-edge{' '}
               <strong className="text-lg md:text-2xl">front-end</strong>{' '}
