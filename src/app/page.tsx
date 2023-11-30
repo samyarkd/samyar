@@ -1,7 +1,7 @@
-import AnimatedSection from '@/components/main/animated-section'
+import HomeSection from '@/components/home/home-section'
 import SkillBubble from '@/components/skill-bubble'
 import Timeline from '@/components/timeline'
-import ScrollSections from '@/components/transition/scroll-sections'
+import AnimatedSection from '@/components/transition/animated-sections'
 import TransitionHelper from '@/components/transition/transition-helper'
 import {
   Description,
@@ -77,123 +77,120 @@ const ProjectCard = ({ project }: { project: TProject }) => {
 
 export default function Home() {
   return (
-    <AnimatedSection />
-    // <div className="max-w-5xl h-screen mx-auto overflow-hidden relative">
-    //   <ScrollSections>
-    //     <AnimatedSection className="flex flex-col-reverse items-center justify-center xs:flex-row gap-4">
-    //       <TransitionHelper
-    //         initial={{ scale: 0 }}
-    //         animate={{ scale: 1 }}
-    //         transition={{
-    //           duration: 0.3,
-    //           ease: 'backOut'
-    //         }}>
-    //         <Image
-    //           className="w-full md:min-w-[225px] mx-auto object-cover object-center shadow-xl dark:shadow-white/20 shadow-black/10 hidden xs:block max-w-xs xs:w-1/4 rounded-lg "
-    //           width={620}
-    //           height={620}
-    //           alt="Samyarkd"
-    //           src={'/samyar.jpg'}
-    //         />
-    //       </TransitionHelper>
-    //       <TransitionHelper
-    //         initial={{ x: -200, opacity: 0 }}
-    //         animate={{ x: 0, opacity: 1 }}
-    //         transition={{
-    //           ease: 'backOut',
-    //           delay: 0.3,
-    //           duration: 0.3
-    //         }}
-    //         className="-z-10">
-    //         <div className="space-y-4">
-    //           <h2 className="text-4xl">
-    //             Samyar -{' '}
-    //             <span className="text-2xl dark:text-gray-300 text-gray-600">
-    //               Web Dev 🕸️
-    //             </span>
-    //           </h2>
-    //           <p className="col-span-3">
-    //             Welcome to my personal blog and portfolio 👀. I&#39;m a web
-    //             developer who can create stunning websites using cutting-edge{' '}
-    //             <strong className="text-lg md:text-2xl">front-end</strong>{' '}
-    //             technologies. Specialized in{' '}
-    //             <RoughNotation
-    //               animationDelay={1000}
-    //               type="underline"
-    //               animate
-    //               color="red"
-    //               show>
-    //               <strong className="text-lg md:text-2xl">ReactJs</strong>
-    //             </RoughNotation>{' '}
-    //             ecosystem. I love exploring new technologies 🩸 and sharing my
-    //             insights with you.
-    //           </p>
-    //         </div>
-    //       </TransitionHelper>
-    //     </AnimatedSection>
-    //     <AnimatedSection className="flex flex-col gap-4 w-full">
-    //       <div>
-    //         <SectionHeader>Skillset 🧰</SectionHeader>
-    //         <p>
-    //           I&#39;m more skilled in Front-End side but I have some experience
-    //           in back-end development too.
-    //         </p>
-    //       </div>
-    //       <div>
-    //         <SecondaryHeader>Simple Skill list</SecondaryHeader>
-    //         <Description className="mb-2">
-    //           The earlier the skill is mentioned the more skilled I&#39;m at it
-    //         </Description>
-    //         <div className="flex gap-2 flex-wrap balance">
-    //           {skills
-    //             .sort((a, b) => b.value - a.value)
-    //             .map((skill, idx) => (
-    //               <span key={skill.label}>
-    //                 {skill.label} {idx === skills.length - 1 ? '' : ' - '}{' '}
-    //               </span>
-    //             ))}
-    //         </div>
-    //       </div>
-    //       <div>
-    //         <SecondaryHeader>
-    //           <RoughNotation
-    //             animate
-    //             show
-    //             type="highlight"
-    //             animationDelay={2000}
-    //             color="#ffff0030">
-    //             Visualized Skill list 👀
-    //           </RoughNotation>
-    //         </SecondaryHeader>
-    //         <Description className="mb-2">
-    //           The Bigger the skill is the more skilled I&#39;m at it
-    //         </Description>
-    //         <SkillBubble skills={skills} />
-    //       </div>
-    //     </AnimatedSection>
-    //     <AnimatedSection className="w-full">
-    //       <SectionHeader>Timeline</SectionHeader>
-    //       <Description>
-    //         I have more than 2 years of experience in the field of Front-end and
-    //         also some Full-Stack skills, I have worked in one company and a
-    //         product development studio. I really like the style of this timeline
-    //         :D
-    //       </Description>
-    //       <Timeline />
-    //     </AnimatedSection>
-    //     <AnimatedSection className="w-full">
-    //       <SectionHeader>Projects</SectionHeader>
-    //       <Description>
-    //         These are the various web development projects showcasing my
-    //         expertise and skills in front-end and full-stack technologies.
-    //       </Description>
-    //       <div className="mt-4 grid xs:grid-cols-2 md:grid-cols-3 gap-8 mx-auto">
-    //         {projects.map((p, idx) => {
-    //           return <ProjectCard key={idx} project={p} />
-    //         })}
-    //       </div>
-    //     </AnimatedSection>
-    //   </ScrollSections>
-    // </div>
+    <AnimatedSection>
+      <HomeSection className="flex flex-col items-center justify-center gap-10">
+        <TransitionHelper
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{
+            duration: 0.3,
+            ease: [0.645, 0.045, 0.355, 1.0]
+          }}>
+          <Image
+            className="w-full md:min-w-[225px] mx-auto object-cover object-center shadow-xl dark:shadow-white/20 shadow-black/10 max-w-xs xs:w-1/4 rounded-lg "
+            width={620}
+            height={620}
+            alt="Samyarkd"
+            src={'/samyar.jpg'}
+          />
+        </TransitionHelper>
+        <TransitionHelper
+          initial={{ y: -200, opacity: 0, scale: 0 }}
+          animate={{ y: 0, opacity: 1, scale: 1 }}
+          transition={{
+            ease: 'backOut',
+            delay: 0.4,
+            duration: 0.5
+          }}
+          className="-z-10">
+          <div className="space-y-4 text-center">
+            <h2 className="text-4xl">
+              Samyar -{' '}
+              <span className="text-2xl dark:text-gray-300 text-gray-600">
+                Web Dev 🕸️
+              </span>
+            </h2>
+            <p className="col-span-3">
+              Welcome to my personal blog and portfolio 👀. I&#39;m a web
+              developer who can create stunning websites using cutting-edge{' '}
+              <strong className="text-lg md:text-2xl">front-end</strong>{' '}
+              technologies. Specialized in{' '}
+              <RoughNotation
+                animationDelay={1000}
+                type="underline"
+                animate
+                color="red"
+                show>
+                <strong className="text-lg md:text-2xl">ReactJs</strong>
+              </RoughNotation>{' '}
+              ecosystem. I love exploring new technologies 🩸 and sharing my
+              insights with you.
+            </p>
+          </div>
+        </TransitionHelper>
+      </HomeSection>
+      <HomeSection className="flex flex-col gap-4 w-full">
+        <div>
+          <SectionHeader>Skillset 🧰</SectionHeader>
+          <p>
+            I&#39;m more skilled in Front-End side but I have some experience in
+            back-end development too.
+          </p>
+        </div>
+        <div>
+          <SecondaryHeader>Simple Skill list</SecondaryHeader>
+          <Description className="mb-2">
+            The earlier the skill is mentioned the more skilled I&#39;m at it
+          </Description>
+          <div className="flex gap-2 flex-wrap balance">
+            {skills
+              .sort((a, b) => b.value - a.value)
+              .map((skill, idx) => (
+                <span key={skill.label}>
+                  {skill.label} {idx === skills.length - 1 ? '' : ' - '}{' '}
+                </span>
+              ))}
+          </div>
+        </div>
+        <div>
+          <SecondaryHeader>
+            <RoughNotation
+              animate
+              show
+              type="highlight"
+              animationDelay={2000}
+              color="#ffff0030">
+              Visualized Skill list 👀
+            </RoughNotation>
+          </SecondaryHeader>
+          <Description className="mb-2">
+            The Bigger the skill is the more skilled I&#39;m at it
+          </Description>
+          <SkillBubble skills={skills} />
+        </div>
+      </HomeSection>
+      <HomeSection className="w-full">
+        <SectionHeader>Timeline</SectionHeader>
+        <Description>
+          I have more than 2 years of experience in the field of Front-end and
+          also some Full-Stack skills, I have worked in one company and a
+          product development studio. I really like the style of this timeline
+          :D
+        </Description>
+        <Timeline />
+      </HomeSection>
+      <HomeSection className="w-full">
+        <SectionHeader>Projects</SectionHeader>
+        <Description>
+          These are the various web development projects showcasing my expertise
+          and skills in front-end and full-stack technologies.
+        </Description>
+        <div className="mt-4 grid xs:grid-cols-2 md:grid-cols-3 gap-8 mx-auto">
+          {projects.map((p, idx) => {
+            return <ProjectCard key={idx} project={p} />
+          })}
+        </div>
+      </HomeSection>
+    </AnimatedSection>
   )
 }
