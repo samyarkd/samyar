@@ -1,5 +1,6 @@
 import SkillBubble from '@/components/skill-bubble'
 import Timeline from '@/components/timeline'
+import TransitionHelper from '@/components/transition/summery-transition'
 import {
   Description,
   SecondaryHeader,
@@ -76,37 +77,55 @@ export default function Home() {
   return (
     <div className="max-w-5xl mx-auto grid grid-rows-[100vh] gap-4">
       <section className="flex flex-col-reverse items-center justify-center xs:flex-row gap-4">
-        <Image
-          className="w-full md:min-w-[225px] mx-auto object-cover object-center shadow-xl dark:shadow-white/20 shadow-black/10 hidden xs:block max-w-xs xs:w-1/4 rounded-lg "
-          width={620}
-          height={620}
-          alt="Samyarkd"
-          src={'/samyar.jpg'}
-        />
-        <div className="space-y-4">
-          <h2 className="text-4xl">
-            Samyar -{' '}
-            <span className="text-2xl dark:text-gray-300 text-gray-600">
-              Web Dev 🕸️
-            </span>
-          </h2>
-          <p className="col-span-3">
-            Welcome to my personal blog and portfolio 👀. I&#39;m a passionate
-            web developer who can create stunning websites using cutting-edge{' '}
-            <strong className="text-lg md:text-2xl">front-end</strong>{' '}
-            technologies. Specialized in{' '}
-            <RoughNotation
-              animationDelay={1000}
-              type="underline"
-              animate
-              color="red"
-              show>
-              <strong className="text-lg md:text-2xl">ReactJs</strong>
-            </RoughNotation>{' '}
-            ecosystem. I love exploring new technologies 🩸 and sharing my
-            insights with you.
-          </p>
-        </div>
+        <TransitionHelper
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{
+            duration: 0.3,
+            ease: 'backOut'
+          }}>
+          <Image
+            className="w-full md:min-w-[225px] mx-auto object-cover object-center shadow-xl dark:shadow-white/20 shadow-black/10 hidden xs:block max-w-xs xs:w-1/4 rounded-lg "
+            width={620}
+            height={620}
+            alt="Samyarkd"
+            src={'/samyar.jpg'}
+          />
+        </TransitionHelper>
+        <TransitionHelper
+          initial={{ x: -200, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{
+            ease: 'backOut',
+            delay: 0.3,
+            duration: 0.3
+          }}
+          className="-z-10">
+          <div className="space-y-4">
+            <h2 className="text-4xl">
+              Samyar -{' '}
+              <span className="text-2xl dark:text-gray-300 text-gray-600">
+                Web Dev 🕸️
+              </span>
+            </h2>
+            <p className="col-span-3">
+              Welcome to my personal blog and portfolio 👀. I&#39;m a web
+              developer who can create stunning websites using cutting-edge{' '}
+              <strong className="text-lg md:text-2xl">front-end</strong>{' '}
+              technologies. Specialized in{' '}
+              <RoughNotation
+                animationDelay={1000}
+                type="underline"
+                animate
+                color="red"
+                show>
+                <strong className="text-lg md:text-2xl">ReactJs</strong>
+              </RoughNotation>{' '}
+              ecosystem. I love exploring new technologies 🩸 and sharing my
+              insights with you.
+            </p>
+          </div>
+        </TransitionHelper>
       </section>
       <hr className="w-full" />
       <section className="flex flex-col gap-4 w-full">
