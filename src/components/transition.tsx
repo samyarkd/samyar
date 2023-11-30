@@ -1,7 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
-import { type ReactNode } from 'react'
+import { useLayoutEffect, type ReactNode } from 'react'
 
 const variants = {
   hidden: { opacity: 0, x: 0, y: 200 },
@@ -10,13 +10,16 @@ const variants = {
 
 const BlogTransition = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname()
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <motion.main
       key={pathname}
       variants={variants}
       initial="hidden"
-      animate="enter"
-      transition={{ type: 'linear' }}>
+      animate="enter">
       {children}
     </motion.main>
   )

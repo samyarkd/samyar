@@ -3,7 +3,6 @@ import './globals.css'
 
 import Header from '@/components/layouts/header'
 import Providers from '@/components/providers'
-import BlogTransition from '@/components/transition'
 import clsx from 'clsx'
 import localFont from 'next/font/local'
 import { type ReactNode } from 'react'
@@ -24,12 +23,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={clsx(
           PatrickHandSC.className,
-          'relative min-h-screen flex flex-col '
+          'relative min-h-screen scroll-smooth'
         )}>
         <Providers>
           <Header />
 
-          <BlogTransition>{children}</BlogTransition>
+          {children}
         </Providers>
       </body>
     </html>

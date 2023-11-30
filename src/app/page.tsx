@@ -1,4 +1,3 @@
-import Content from '@/components/content'
 import SkillBubble from '@/components/skill-bubble'
 import Timeline from '@/components/timeline'
 import {
@@ -75,10 +74,10 @@ const ProjectCard = ({ project }: { project: TProject }) => {
 
 export default function Home() {
   return (
-    <Content className="flex flex-col gap-6">
-      <section className="flex flex-col-reverse xs:flex-row gap-4">
+    <div className="max-w-5xl mx-auto grid grid-rows-[100vh] gap-4">
+      <section className="flex flex-col-reverse items-center justify-center xs:flex-row gap-4">
         <Image
-          className="back-in-up w-full md:min-w-[225px] mx-auto object-cover object-center shadow-xl dark:shadow-white/20 shadow-black/10 hidden xs:block max-w-xs xs:w-1/4 rounded-lg "
+          className="w-full md:min-w-[225px] mx-auto object-cover object-center shadow-xl dark:shadow-white/20 shadow-black/10 hidden xs:block max-w-xs xs:w-1/4 rounded-lg "
           width={620}
           height={620}
           alt="Samyarkd"
@@ -174,6 +173,6 @@ export default function Home() {
           })}
         </div>
       </section>
-    </Content>
+    </div>
   )
 }
