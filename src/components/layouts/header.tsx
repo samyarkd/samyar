@@ -10,7 +10,7 @@ const Agbalumo = localFont({
 
 const Header = () => {
   return (
-    <div className="fixed w-full top-0 z-50 backdrop-blur border-b border-black/25 dark:border-white/25 dark:backdrop-brightness-50 border-solid">
+    <div className="sticky h-[65px] sm:h-[68px]  w-full top-0 z-50 backdrop-blur border-b border-black/25 dark:border-white/25 dark:backdrop-brightness-50 border-solid">
       <header className="max-w-5xl flex items-baseline mx-auto w-full p-4">
         <Link href="/" className={clsx(Agbalumo.className, 'text-2xl')}>
           Samyar
