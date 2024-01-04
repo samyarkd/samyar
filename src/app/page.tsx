@@ -146,7 +146,7 @@ export default function Home() {
             </p>
           </div>
           <div className="flex items-center justify-center flex-col gap-2 balance">
-            <SubHeader>Front-End Shit</SubHeader>
+            <SubHeader>Front-End</SubHeader>
             <Description>
               {frontendSkills
                 .sort((a, b) => b.value - a.value)
@@ -159,7 +159,7 @@ export default function Home() {
                   )
                 })}
             </Description>
-            <SubHeader>Back-End Shit</SubHeader>
+            <SubHeader>Back-End</SubHeader>
             <Description>
               {backendSkills
                 .sort((a, b) => b.value - a.value)
@@ -225,7 +225,7 @@ export default function Home() {
           />
         </div>
       </HomeSection>
-      <HomeSection>
+      <HomeSection className="items-stretch w-full">
         <SecondaryHeader>
           <RoughNotation
             animate
@@ -241,7 +241,7 @@ export default function Home() {
         </Description>
         <SkillBubble skills={skills} />
       </HomeSection>
-      <HomeSection className="w-full">
+      <HomeSection className="w-full items-stretch">
         <SectionHeader>Timeline</SectionHeader>
         <Description>
           I have more than 2 years of experience in the field of Front-end and
