@@ -6,7 +6,11 @@ export const SectionHeader = ({ children }: { children: ReactNode }) => {
 }
 
 export const SecondaryHeader = ({ children }: { children: ReactNode }) => {
-  return <h1 className="text-3xl">{children}</h1>
+  return <h2 className="text-3xl">{children}</h2>
+}
+
+export const SubHeader = ({ children }: { children: ReactNode }) => {
+  return <h3 className="text-xl">{children}</h3>
 }
 
 export const Description = ({

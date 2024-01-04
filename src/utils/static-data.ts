@@ -1,3 +1,50 @@
+export const frontendSkills = [
+  { label: 'ReactJs', value: 100 },
+  { label: 'NextJs', value: 95 },
+  { label: 'AntDesign', value: 100 },
+  { label: 'MUI', value: 80 },
+  { label: 'Tailwindcss', value: 100 },
+  { label: 'ShadCn', value: 100 },
+  { label: 'Jotai', value: 100 },
+  { label: 'Redux', value: 90 },
+  { label: 'Typescript', value: 90 },
+  { label: 'React-Context', value: 80 },
+  { label: 'Zustand', value: 90 },
+  { label: 'D3.js', value: 75 },
+  { label: 'Tanstack-Query', value: 90 },
+  { label: 'Framer-Motion', value: 50 },
+  { label: 'Vite', value: 80 },
+  { label: 'SCSS', value: 90 },
+  { label: 'LESS', value: 80 },
+  { label: 'Emotion', value: 60 },
+  { label: 'Webpack', value: 35 },
+  { label: 'React-Router', value: 80 },
+  { label: 'MapBox', value: 70 },
+  { label: 'RoughJs', value: 70 },
+  { label: 'Nx', value: 60 },
+  { label: 'Jest', value: 60 },
+  { label: 'Cypress', value: 40 },
+  { label: 'Playwright', value: 40 },
+  { label: 'Zod', value: 90 }
+]
+
+export const backendSkills = [
+  { label: 'NextJs', value: 95 },
+  { label: 'NodeJs', value: 90 },
+  { label: 'SocketIO', value: 80 },
+  { label: 'Prisma', value: 90 },
+  { label: 'ExpressJs', value: 45 },
+  { label: 'Postgres', value: 55 },
+  { label: 'Mysql', value: 55 },
+  { label: 'SQLite', value: 55 },
+  { label: 'SQL', value: 40 },
+  { label: 'Solidity', value: 10 },
+  { label: 'Nginx', value: 60 },
+  { label: 'Docker', value: 80 },
+  { label: 'Docker-Compose', value: 80 },
+  { label: 'Redis', value: 50 }
+]
+
 export const skills = [
   { label: 'ReactJs', value: 100, category: 'Frontend' },
   { label: 'NextJs', value: 95, category: 'Frontend' },
@@ -54,7 +101,7 @@ export const skills = [
   { label: 'MapBox', value: 70, category: 'Frontend' }
 ]
 
-export type TSkill = (typeof skills)[number]
+export type TSkill = (typeof backendSkills)[number]
 
 export const projects = [
   {
