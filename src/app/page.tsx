@@ -1,3 +1,4 @@
+import ExpPoints from '@/components/home/exp-points'
 import HomeSection from '@/components/home/home-section'
 import SkillBubble from '@/components/skill-bubble'
 import Timeline from '@/components/timeline'
@@ -250,6 +251,17 @@ export default function Home() {
           :D
         </Description>
         <Timeline />
+      </HomeSection>
+      <HomeSection>
+        <SectionHeader>
+          Exp Points
+        </SectionHeader>
+        <Description>
+          So here are some experience points :D (
+          <Link href={"https://jvns.ca/blog/brag-documents/"}>Brag List</Link>),
+          I have listed some key points in my work experience that i think they were value.
+        </Description>
+        <ExpPoints />
       </HomeSection>
       <HomeSection className="w-full h-auto pb-10">
         <SectionHeader>Projects</SectionHeader>
