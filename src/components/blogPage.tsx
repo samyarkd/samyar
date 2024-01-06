@@ -1,15 +1,10 @@
 import clsx from 'clsx'
-import { Crete_Round } from 'next/font/google'
 import Image from 'next/image'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import { TinaMarkdown, type Components } from 'tinacms/dist/rich-text'
 import { type PostQuery } from '../../tina/__generated__/types'
 
-const ArticleFont = Crete_Round({
-  weight: '400',
-  subsets: ['latin']
-})
 
 // Extracted a function to get the image props
 const getImageProps = (image: string, alt: string) => ({
@@ -26,8 +21,7 @@ const BlogPage = async (props: PostQuery) => {
   return (
     <div
       className={clsx(
-        'max-w-xl w-full mx-auto flex flex-col space-y-5',
-        ArticleFont.className
+        'max-w-xl w-full mx-auto flex flex-col space-y-5'
       )}>
       <div className="space-y-2">
         <time className="text-sm font-sans dark:text-slate-400 text-slate-600">

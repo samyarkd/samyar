@@ -163,3 +163,44 @@ export const projects = [
 ]
 
 export type TProject = (typeof projects)[number]
+
+export const expPoints = [
+  {
+    "project name": "ChallenQuiz",
+    "description": [
+      "Implemented a blockchain-based verification system to confirm the authenticity of TON transactions, improving security.",
+      "Developed a real-time quiz platform using Socket.io (client and server), enabling simultaneous and fair competition between users by providing instantaneous question delivery and instant feedback on answers.",
+      "Dveloped a function to convert boc into transaction message hash also fixed a bug related to nodejs compatibilty for tonweb in the proccess"
+    ]
+  },
+  {
+    "project name": "Sinex",
+    "description": [
+      "Developed an advanced map using MapBox SDK to accurately calculate rooftop surface areas, enhancing the platform's capability to provide precise data and analytics. Integrated seamless user interactions by changing roof colors in response to hover action, improving the platform's user experience and visual appeal."
+    ]
+  },
+  {
+    "project name": "ReviewAI",
+    "description": [
+      "Developed a custom WYSIWYG editor for contracts to enhance the user experience and facilitate easy contract creation and management.",
+      "Developeted a comment feature to let user comment inside the editor and share comments between parties envolved to provite better contract managment.",
+      "Implemented a digital signing feature for contracts, enabling secure and efficient contract execution between parties.",
+      "Integrated AI capabilities into contract review process, using natural language processing to summarize contracts and provide insights into potential risks and benefits for involved parties."
+    ]
+  },
+  {
+    "project name": "DustTree Chat Bot",
+    "description": [
+      "Developed a chatbot to assist users with immigration queries, using Langchain and Redis to provide accurate and personalized responses based on information from Finnish government documents."
+    ]
+  },
+  {
+    "project name": "Tafarda",
+    "description": [
+      "Visualized stock share distributions using a dynamic and interactive Pi Chart built with D3.js, providing investors with a clear and engaging representation of their investments.",
+      "Developed a modern and efficient tech stack using React, Ant Design, React Query, and Typescript to accelerate the development process and provide a solid foundation for startups to build upon, promoting fast and effective product creation."
+    ]
+  }
+]
+
+

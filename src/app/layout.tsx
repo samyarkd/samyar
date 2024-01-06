@@ -4,12 +4,14 @@ import './globals.css'
 import Header from '@/components/layouts/header'
 import Providers from '@/components/providers'
 import clsx from 'clsx'
-import localFont from 'next/font/local'
+import { Playpen_Sans } from 'next/font/google'
 import { type ReactNode } from 'react'
 
-const PatrickHandSC = localFont({
-  src: '../utils/assets/fonts/PatrickHandSC-Regular.ttf',
-  display: 'swap'
+const Playpen = Playpen_Sans({
+  weight: '400',
+  subsets: [
+    'latin'
+  ]
 })
 
 export const metadata: Metadata = {
@@ -22,7 +24,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body
         className={clsx(
-          PatrickHandSC.className,
+          Playpen.className,
           'relative min-h-screen scroll-smooth'
         )}>
         <Providers>

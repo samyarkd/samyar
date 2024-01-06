@@ -258,7 +258,7 @@ export default function Home() {
         </SectionHeader>
         <Description>
           So here are some experience points :D (
-          <Link href={"https://jvns.ca/blog/brag-documents/"}>Brag List</Link>),
+          <Link className="underline font-medium" href={"https://jvns.ca/blog/brag-documents/"}>Brag List</Link>),
           I have listed some key points in my work experience that i think they were value.
         </Description>
         <ExpPoints />
