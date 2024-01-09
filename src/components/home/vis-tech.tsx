@@ -1,3 +1,4 @@
+'use client'
 import HomeSection from '@/components/home/home-section'
 import SkillBubble from '@/components/skill-bubble'
 import { Description, SecondaryHeader } from '@/components/ui/typography'
