@@ -35,7 +35,8 @@ const ProjectCard = ({ project }: { project: TProject }) => {
   return (
     <RoughNotation type="box" color={color} show>
       <div
-        className={`card gap-4 flex h-full flex-col group p-2 backdrop-blur`}>
+        className={`card gap-4 flex h-full flex-col group p-2 backdrop-blur`}
+      >
         <RoughNotation type="underline" color={color} show>
           <Image
             className="border border-solid dark:border-gray-800 border-gray-300 rounded w-full h-[200px] object-cover object-top"
@@ -59,7 +60,8 @@ const ProjectCard = ({ project }: { project: TProject }) => {
             className="mt-auto group-hover:bg-gray-200 transition w-full block group-hover:text-gray-800 text-center p-1 rounded-lg text-sm"
             href={project.website}
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             Visit Website
           </Link>
         </div>
@@ -69,12 +71,14 @@ const ProjectCard = ({ project }: { project: TProject }) => {
 }
 export default function Projects() {
   return (
-    <HomeSection className="w-full h-auto pb-10">
-      <SectionHeader>Projects</SectionHeader>
-      <Description>
-        These are the various web development projects showcasing my expertise
-        and skills in front-end and full-stack technologies.
-      </Description>
+    <HomeSection className="w-full h-auto py-16">
+      <div className="space-y-4 pb-4 text-center">
+        <SectionHeader>Projects</SectionHeader>
+        <Description>
+          These are the various web development projects showcasing my expertise
+          and skills in front-end and full-stack technologies.
+        </Description>
+      </div>
       <div className="mt-4 grid xs:grid-cols-2 md:grid-cols-3 gap-8 mx-auto">
         {projects.map((p, idx) => {
           return <ProjectCard key={idx} project={p} />
