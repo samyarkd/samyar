@@ -1,6 +1,6 @@
 ---
 title: 'Hello, World! - سڵاو دونیا !!'
-description: 'Just a description :D'
+description: 'Just a description'
 hero: /uploads/Screenshot 2023-11-15 012651.png
 date: 2023-11-21T20:30:00.000Z
 category: coding

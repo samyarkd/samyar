@@ -10,7 +10,7 @@ function ExpPoints() {
       <div className="text-center space-y-4">
         <SectionHeader>Exp Points</SectionHeader>
         <Description>
-          So here are some experience points :D (
+          So here are some experience points (
           <Link
             className="underline font-medium text-white/90"
             href={'https://jvns.ca/blog/brag-documents/'}

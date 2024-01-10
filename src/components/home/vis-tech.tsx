@@ -1,6 +1,6 @@
 import HomeSection from '@/components/home/home-section'
-import SkillBubble from '@/components/skill-bubble'
 import { skills } from '@/utils/static-data'
+import SkillBubble from '../skill-bubble'
 import VisualizedHeaderTitle from './vis-tech-title'
 
 export default function VisTech() {
@@ -11,3 +11,5 @@ export default function VisTech() {
     </HomeSection>
   )
 }
+
+

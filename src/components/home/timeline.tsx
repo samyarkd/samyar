@@ -11,7 +11,6 @@ export default function TimeLine() {
           I have more than 2 years of experience in the field of Front-end and
           also some Full-Stack skills, I have worked in one company and a
           product development studio. I really like the style of this timeline
-          :D
         </Description>
       </div>
       <Timeline />

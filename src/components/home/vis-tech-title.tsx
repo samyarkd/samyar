@@ -2,8 +2,8 @@
 
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Description, SecondaryHeader } from '../ui/typography'
 import { RoughNotation } from 'react-rough-notation'
+import { Description, SecondaryHeader } from '../ui/typography'
 
 export default function VisualizedHeaderTitle() {
   const headingRef = useRef(null)
