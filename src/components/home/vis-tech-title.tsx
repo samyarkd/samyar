@@ -17,8 +17,7 @@ export default function VisualizedHeaderTitle() {
           show={isInView}
           type="highlight"
           animationDelay={100}
-          color="#ffff0030"
-        >
+          color="#ffff0030">
           Visualized Skill list 👀
         </RoughNotation>
       </SecondaryHeader>
