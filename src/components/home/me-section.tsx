@@ -21,7 +21,7 @@ export default function MeSection() {
           animate={{ scale: 1 }}
           transition={{
             duration: 0.3,
-            ease: [0.645, 0.045, 0.355, 1.0]
+            ease: [0.645, 0.045, 0.355, 1]
           }}
           className="mb-2"
         >

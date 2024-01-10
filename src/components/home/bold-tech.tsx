@@ -6,10 +6,29 @@ import {
 import { backendSkills, frontendSkills } from '@/utils/static-data'
 import HomeSection from './home-section'
 import Image from 'next/image'
+import TransitionHelper from '../transition/transition-helper'
 
 export default function BoldTech() {
   return (
-    <HomeSection className="text-center space-y-14 gap-4 w-full divide-y py-16">
+    <HomeSection className="text-center space-y-14 gap-4 w-full divide-y py-16 overflow-hidden">
+      <SkillsetHeading />
+      <SkillsetImages />
+    </HomeSection>
+  )
+}
+
+function SkillsetHeading() {
+  return (
+    <TransitionHelper
+      showInView
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{
+        duration: 0.3,
+        ease: 'backOut'
+      }}
+      showInViewMargin="-50px"
+    >
       <div className="space-y-4">
         <div className="space-y-4">
           <SectionHeader>Skillset 🧰</SectionHeader>
@@ -47,6 +66,26 @@ export default function BoldTech() {
           </Description>
         </div>
       </div>
+    </TransitionHelper>
+  )
+}
+
+function SkillsetImages() {
+  return (
+    <TransitionHelper
+      initial={{ y: 100, opacity: 0 }}
+      animate={{
+        y: 0,
+        opacity: 1
+      }}
+      transition={{
+        ease: 'backOut',
+        duration: 0.5,
+        delay: 0.2
+      }}
+      showInView
+      showInViewMargin="-50px"
+    >
       <div className="flex gap-10 pt-4 flex-wrap justify-center items-center">
         <Image
           priority
@@ -97,6 +136,6 @@ export default function BoldTech() {
           src="/react-query.png"
         />
       </div>
-    </HomeSection>
+    </TransitionHelper>
   )
 }
