@@ -20,9 +20,5 @@ export const Description = ({
   children: ReactNode
   className?: string
 }) => {
-  return (
-    <p className={clsx('dark:text-gray-300 text-gray-700', className)}>
-      {children}
-    </p>
-  )
+  return <p className={clsx('text-gray-300', className)}>{children}</p>
 }

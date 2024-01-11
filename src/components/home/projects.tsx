@@ -39,7 +39,7 @@ const ProjectCard = ({ project }: { project: TProject }) => {
       >
         <RoughNotation type="underline" color={color} show>
           <Image
-            className="border border-solid dark:border-gray-800 border-gray-300 rounded w-full h-[200px] object-cover object-top"
+            className="border border-solid border-gray-800 rounded w-full h-[200px] object-cover object-top"
             width={1800}
             height={1000}
             src={project.image}

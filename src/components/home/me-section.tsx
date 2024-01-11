@@ -26,7 +26,7 @@ export default function MeSection() {
           className="mb-2"
         >
           <Image
-            className="w-full md:min-w-[225px] mx-auto object-cover object-center shadow-xl dark:shadow-white/20 shadow-black/10 max-w-xs xs:w-3/4 rounded-lg "
+            className="w-full md:min-w-[225px] mx-auto object-cover object-center shadow-xl shadow-white/20 max-w-xs xs:w-3/4 rounded-lg "
             width={620}
             height={620}
             alt="Samyarkd"
@@ -46,9 +46,7 @@ export default function MeSection() {
           <div className="space-y-4 text-center">
             <h2 className="text-4xl">
               Samyar -{' '}
-              <span className="text-2xl dark:text-gray-300 text-gray-600">
-                Web Dev 🕸️
-              </span>
+              <span className="text-2xl text-gray-300">Web Dev 🕸️</span>
             </h2>
             <p className="col-span-3 max-w-sm">
               Welcome to my personal blog and portfolio 👀. I&#39;m a web

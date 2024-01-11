@@ -5,7 +5,6 @@ import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import { TinaMarkdown, type Components } from 'tinacms/dist/rich-text'
 import { type PostQuery } from '../../tina/__generated__/types'
 
-
 // Extracted a function to get the image props
 const getImageProps = (image: string, alt: string) => ({
   width: 900,
@@ -19,12 +18,9 @@ const BlogPage = async (props: PostQuery) => {
   const post = props.post
 
   return (
-    <div
-      className={clsx(
-        'max-w-xl w-full mx-auto flex flex-col space-y-5'
-      )}>
+    <div className={clsx('max-w-xl w-full mx-auto flex flex-col space-y-5')}>
       <div className="space-y-2">
-        <time className="text-sm font-sans dark:text-slate-400 text-slate-600">
+        <time className="text-sm font-sans text-slate-400">
           {new Date(post.date).toDateString()}
         </time>
         <h1 className="text-3xl sm:text-5xl">{post.title}</h1>
@@ -32,7 +28,7 @@ const BlogPage = async (props: PostQuery) => {
         {post?.hero && <Image {...getImageProps(post.hero, post.title)} />}
       </div>
       <hr />
-      <article className="dark:text-white text-zinc-900 prose prose-base md:prose-lg">
+      <article className="text-white prose prose-base md:prose-lg">
         <TinaMarkdown components={components} content={post.body} />
       </article>
     </div>
@@ -55,13 +51,11 @@ const components: Components<any> = {
   h2: (props: any) => {
     try {
       return (
-        <h2 className="dark:text-white text-zinc-900">
-          {props.children.props.content[0].text}
-        </h2>
+        <h2 className="text-white">{props.children.props.content[0].text}</h2>
       )
     } catch (error) {
       return (
-        <h2 className="dark:text-white text-zinc-900">
+        <h2 className="text-white">
           There was an error while parsin the title
         </h2>
       )

@@ -25,9 +25,10 @@ const BlogPosts = async () => {
     <div className="flex flex-col space-y-10 max-w-xl mx-auto">
       {blogPosts?.data.postConnection.edges?.map((p) => (
         <Link
-          className="border p-2 space-y-4 rounded border-solid border-gray-500/50 shadow hover:shadow-xl dark:shadow-white/20 dark:hover:shadow-white/10 dark:border-gray-300 transition-shadow group/item"
+          className="border p-2 space-y-4 rounded border-solid shadow shadow-white/20 hover:shadow-white/10 border-gray-300 transition-shadow group/item"
           href={`/blog/${p?.node?._sys.filename}`}
-          key={p?.node?.id}>
+          key={p?.node?.id}
+        >
           <div className="flex flex-col items-start justify-between">
             {p?.node?.date != null && (
               <time className="text-sm">
