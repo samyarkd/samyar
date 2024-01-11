@@ -10,7 +10,7 @@ import TransitionHelper from '../transition/transition-helper'
 
 export default function BoldTech() {
   return (
-    <HomeSection className="text-center space-y-14 gap-4 w-full divide-y py-16 overflow-hidden">
+    <HomeSection className="text-center space-y-14 gap-4 w-full divide-y py-12 overflow-hidden">
       <SkillsetHeading />
       <SkillsetImages />
     </HomeSection>
@@ -21,11 +21,10 @@ function SkillsetHeading() {
   return (
     <TransitionHelper
       showInView
-      initial={{ scale: 0 }}
-      animate={{ scale: 1 }}
+      initial={{ y: 100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
       transition={{
-        duration: 0.3,
-        ease: 'backOut'
+        delay: 0.1
       }}
       showInViewMargin="-50px"
     >
@@ -79,7 +78,6 @@ function SkillsetImages() {
         opacity: 1
       }}
       transition={{
-        ease: 'backOut',
         duration: 0.5,
         delay: 0.2
       }}

@@ -1,10 +1,13 @@
-import React from 'react'
+'use client'
+import React, { useMemo, useRef } from 'react'
 import HomeSection from './home-section'
 import { Description, SectionHeader } from '../ui/typography'
 import { projects, type TProject } from '@/utils/static-data'
 import Image from 'next/image'
 import Link from 'next/link'
 import { RoughNotation } from 'react-rough-notation'
+import TransitionHelper from '../transition/transition-helper'
+import { useInView } from 'framer-motion'
 
 const colors = [
   '#4CAF50',
@@ -30,11 +33,24 @@ const colors = [
 ]
 const ProjectCard = ({ project }: { project: TProject }) => {
   // pick a random color
-  const color = colors[Math.floor(Math.random() * colors.length)]
+  const color = useMemo(
+    () => colors[Math.floor(Math.random() * colors.length)],
+    []
+  )
+  const projectRef = useRef(null)
+  const isInView = useInView(projectRef, {
+    once: true
+  })
 
   return (
-    <RoughNotation type="box" color={color} show>
+    <RoughNotation
+      animationDelay={600}
+      type="box"
+      color={color}
+      show={isInView}
+    >
       <div
+        ref={projectRef}
         className={`card gap-4 flex h-full flex-col group p-2 backdrop-blur`}
       >
         <RoughNotation type="underline" color={color} show>
@@ -71,17 +87,37 @@ const ProjectCard = ({ project }: { project: TProject }) => {
 }
 export default function Projects() {
   return (
-    <HomeSection className="w-full h-auto py-16">
-      <div className="space-y-4 pb-4 text-center">
-        <SectionHeader>Projects</SectionHeader>
-        <Description>
-          These are the various web development projects showcasing my expertise
-          and skills in front-end and full-stack technologies.
-        </Description>
-      </div>
+    <HomeSection className="w-full h-auto py-12 space-y-16 overflow-hidden">
+      <TransitionHelper
+        showInView
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{
+          delay: 0.1
+        }}
+      >
+        <div className="space-y-4 text-center">
+          <SectionHeader>Projects</SectionHeader>
+          <Description>
+            These are the various web development projects showcasing my
+            expertise and skills in front-end and full-stack technologies.
+          </Description>
+        </div>
+      </TransitionHelper>
       <div className="mt-4 grid xs:grid-cols-2 md:grid-cols-3 gap-8 mx-auto">
         {projects.map((p, idx) => {
-          return <ProjectCard key={idx} project={p} />
+          return (
+            <TransitionHelper
+              showInView
+              initial={{ y: 100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{
+                delay: 0.1
+              }}
+            >
+              <ProjectCard key={idx} project={p} />
+            </TransitionHelper>
+          )
         })}
       </div>
     </HomeSection>

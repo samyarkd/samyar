@@ -7,7 +7,9 @@ import { Description, SecondaryHeader } from '../ui/typography'
 
 export default function VisualizedHeaderTitle() {
   const headingRef = useRef(null)
-  const isInView = useInView(headingRef)
+  const isInView = useInView(headingRef, {
+    once: true
+  })
 
   return (
     <div className="text-center space-y-4 pb-4" ref={headingRef}>
@@ -16,8 +18,9 @@ export default function VisualizedHeaderTitle() {
           animate
           show={isInView}
           type="highlight"
-          animationDelay={100}
-          color="#ffff0030">
+          animationDelay={1000}
+          color="#ffff0030"
+        >
           Visualized Skill list 👀
         </RoughNotation>
       </SecondaryHeader>

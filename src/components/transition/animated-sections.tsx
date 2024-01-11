@@ -27,7 +27,8 @@ const AnimatedSection = ({ children }: { children: ReactNode }) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -100 }}
             onClick={goUp}
-            className="absolute top-5 right-1/2 z-10">
+            className="absolute top-5 right-1/2 z-10"
+          >
             Up
           </motion.button>
         )}
@@ -38,9 +39,9 @@ const AnimatedSection = ({ children }: { children: ReactNode }) => {
         animate={{ y: `${index * 100}%` }}
         className="h-full w-full overscroll-contain absolute top-0 h-child-full"
         transition={{
-          ease: 'backOut',
           duration: 0.2
-        }}>
+        }}
+      >
         {children}
       </motion.div>
 
@@ -51,7 +52,8 @@ const AnimatedSection = ({ children }: { children: ReactNode }) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 100 }}
             onClick={goDown}
-            className="absolute bottom-5 right-1/2 z-10">
+            className="absolute bottom-5 right-1/2 z-10"
+          >
             Down
           </motion.button>
         )}
