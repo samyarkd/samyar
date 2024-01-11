@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 
 import Header from '@/components/layouts/header'
@@ -9,9 +10,7 @@ import { type ReactNode } from 'react'
 
 const Playpen = Playpen_Sans({
   weight: '400',
-  subsets: [
-    'latin'
-  ]
+  subsets: ['latin']
 })
 
 export const metadata: Metadata = {
@@ -26,12 +25,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         className={clsx(
           Playpen.className,
           'relative min-h-screen scroll-smooth'
-        )}>
+        )}
+      >
         <Providers>
           <Header />
 
           {children}
         </Providers>
+        <Analytics />
       </body>
     </html>
   )
