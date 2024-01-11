@@ -12,7 +12,7 @@ const SkillBubble = ({ skills }: { skills: TSkill[] }) => {
   const svgWidth = 900
   const svgHeight = 750
 
-  function getBubbleHtml(isDark: boolean) {
+  function getBubbleHtml() {
     const svgRef = JSDOM.fragment(
       `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 ${svgWidth} ${svgHeight}" width="100%" height="100%" overflow="auto"></svg>`
     ).firstChild as SVGSVGElement
@@ -21,7 +21,7 @@ const SkillBubble = ({ skills }: { skills: TSkill[] }) => {
       return ''
     }
 
-    const themeColor = isDark ? 'white' : 'black'
+    const themeColor = 'white'
     const margin = 1 // to avoid clipping the root circle stroke
     const color = d3.scaleOrdinal(d3.schemeTableau10)
 
@@ -113,7 +113,7 @@ const SkillBubble = ({ skills }: { skills: TSkill[] }) => {
     return svgRef.outerHTML
   }
 
-  return <ThemedSVG dark={getBubbleHtml(true)} light={getBubbleHtml(false)} />
+  return <ThemedSVG htmlData={getBubbleHtml()} />
 }
 
 // we will use the cached one if the skill data has not changed

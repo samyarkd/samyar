@@ -6,7 +6,7 @@ import ThemedSVG from './themed-svg'
 const document = new JSDOM().window.document
 // TODO: make the svg so that it will be rendred in 3 sizes (sm, md, lg)
 const Timeline = () => {
-  function svgBubble(isDark: boolean) {
+  function svgBubble() {
     const svgWidth = 500
     const svgHeight = 300
     const svgRef = JSDOM.fragment(
@@ -20,8 +20,7 @@ const Timeline = () => {
     }
     const rc = rough.svg(svgRef)
 
-    const themeColor = isDark ? 'white' : 'black'
-
+    const themeColor = 'white'
     const baseCol = svgWidth / 4
 
     const line = rc.line(0, 0, baseCol, 150, {
@@ -129,7 +128,7 @@ const Timeline = () => {
     return svgRef.outerHTML
   }
 
-  return <ThemedSVG dark={svgBubble(true)} light={svgBubble(false)} />
+  return <ThemedSVG htmlData={svgBubble()} />
 }
 
 export default memo(Timeline)
