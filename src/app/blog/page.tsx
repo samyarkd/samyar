@@ -23,6 +23,7 @@ const BlogPosts = async () => {
 
   return (
     <div className="flex flex-col space-y-10 max-w-xl mx-auto">
+      <h1>Blog Posts</h1>
       {blogPosts?.data.postConnection.edges?.map((p) => (
         <Link
           className="border p-2 space-y-4 rounded border-solid shadow shadow-white/20 hover:shadow-white/10 border-gray-300 transition-shadow group/item"

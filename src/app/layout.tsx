@@ -5,11 +5,11 @@ import './globals.css'
 import Header from '@/components/layouts/header'
 import Providers from '@/components/providers'
 import clsx from 'clsx'
-import { Playpen_Sans } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { type ReactNode } from 'react'
 
-const Playpen = Playpen_Sans({
-  weight: '400',
+const DefaultFont = Inter({
+  weight: ['400', '100', '200', '300', '500', '600', '700', '800', '900'],
   subsets: ['latin']
 })
 
@@ -23,13 +23,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body
         className={clsx(
-          Playpen.className,
+          DefaultFont.className,
           'relative min-h-screen scroll-smooth'
         )}
       >
         <Providers>
           <Header />
-
           {children}
         </Providers>
         <Analytics />

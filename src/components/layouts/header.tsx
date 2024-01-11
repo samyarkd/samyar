@@ -32,8 +32,6 @@ const Header = () => {
           </ul>
         </header>
       </div>
-      {/* A placeholder for header to elements under header don't go under it */}
-      <div className="w-full h-[65px] sm:h-[68px]" />
     </>
   )
 }
