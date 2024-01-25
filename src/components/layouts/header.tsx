@@ -1,20 +1,15 @@
 import { MobileMenu } from '@/components/layouts/mobile-menu'
 import clsx from 'clsx'
-import localFont from 'next/font/local'
 import Link from 'next/link'
-
-const Agbalumo = localFont({
-  src: '../../utils/assets/fonts/Agbalumo/Agbalumo-Regular.ttf',
-  display: 'swap'
-})
+import { SamyarSvg } from './samyar-svg'
 
 const Header = () => {
   return (
     <>
       <div className="fixed top-0 h-[65px] sm:h-[68px] w-full z-50 backdrop-blur border-b border-white/25 backdrop-brightness-50 border-solid">
-        <header className="max-w-5xl flex items-baseline mx-auto w-full p-4">
-          <Link href="/" className={clsx(Agbalumo.className, 'text-2xl')}>
-            Samyar
+        <header className="max-w-5xl flex items-center h-full mx-auto w-full px-4 py-2">
+          <Link href="/" className={clsx('text-2xl h-full')}>
+            <SamyarSvg />
           </Link>
 
           <MobileMenu />

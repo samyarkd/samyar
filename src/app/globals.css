@@ -51,3 +51,23 @@ table {
 * {
   min-width: 0;
 }
+
+#Samyar {
+  fill: white;
+  fill-opacity: 0;
+  stroke: white;
+  stroke-width: 5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 5000;
+  stroke-dashoffset: 5000;
+  animation: SignAnimation 4s 2s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes SignAnimation {
+  to {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+}
