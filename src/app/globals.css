@@ -61,7 +61,7 @@ table {
   stroke-linejoin: round;
   stroke-dasharray: 5000;
   stroke-dashoffset: 5000;
-  animation: SignAnimation 4s 2s ease;
+  animation: SignAnimation 4s 1s ease;
   animation-fill-mode: forwards;
 }
 
