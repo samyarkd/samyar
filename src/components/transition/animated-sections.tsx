@@ -27,7 +27,7 @@ const AnimatedSection = ({ children }: { children: ReactNode }) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -100 }}
             onClick={goUp}
-            className="absolute top-5 right-1/2 z-10"
+            className="absolute right-1/2 top-5 z-10"
           >
             Up
           </motion.button>
@@ -37,7 +37,7 @@ const AnimatedSection = ({ children }: { children: ReactNode }) => {
       {/* Children will be passed down here */}
       <motion.div
         animate={{ y: `${index * 100}%` }}
-        className="h-full w-full overscroll-contain absolute top-0 h-child-full"
+        className="h-child-full absolute top-0 h-full w-full overscroll-contain"
         transition={{
           duration: 0.2
         }}

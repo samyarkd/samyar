@@ -9,12 +9,13 @@ const Content = ({
   className?: string
 }) => {
   return (
-    <main className="max-w-6xl translate-y-20 mx-auto flex flex-col items-center justify-between p-4 md:p-24 sm:pt-6 md:pt-6">
+    <main className="mx-auto flex max-w-6xl translate-y-20 flex-col items-center justify-between p-4 sm:pt-6 md:p-24 md:pt-6">
       <div
         className={clsx(
-          'z-10 max-w-5xl w-full text-start md:text-xl text sm:text-base',
+          'text z-10 w-full max-w-5xl text-start sm:text-base md:text-xl',
           className
-        )}>
+        )}
+      >
         {children}
       </div>
     </main>

@@ -8,7 +8,7 @@ import { useRef, useState, type MutableRefObject } from 'react'
 const page = () => {
   return (
     <>
-      <div className="absolute left-0 top-0 bottom-0 w-full">
+      <div className="absolute bottom-0 left-0 top-0 w-full">
         <Canvas camera={{ position: [0, 0, 1] }}>
           <Stars />
         </Canvas>

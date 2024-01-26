@@ -6,7 +6,7 @@ import TransitionHelper from '../transition/transition-helper'
 
 export default function VisTech() {
   return (
-    <HomeSection className="items-stretch w-full py-12 bubbles overflow-hidden">
+    <HomeSection className="bubbles w-full items-stretch overflow-hidden py-12">
       <TransitionHelper
         showInView
         initial={{ y: 100, opacity: 0 }}

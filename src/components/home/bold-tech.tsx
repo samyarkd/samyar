@@ -10,7 +10,7 @@ import TransitionHelper from '../transition/transition-helper'
 
 export default function BoldTech() {
   return (
-    <HomeSection className="text-center space-y-14 gap-4 w-full divide-y py-12 overflow-hidden">
+    <HomeSection className="w-full gap-4 space-y-14 divide-y overflow-hidden py-12 text-center">
       <SkillsetHeading />
       <SkillsetImages />
     </HomeSection>
@@ -36,7 +36,7 @@ function SkillsetHeading() {
             back-end development too.
           </p>
         </div>
-        <div className="flex items-center justify-center flex-col gap-2 balance">
+        <div className="balance flex flex-col items-center justify-center gap-2">
           <SubHeader>Front-End</SubHeader>
           <Description>
             {frontendSkills
@@ -80,7 +80,7 @@ function SkillsetImages() {
       showInView
       showInViewMargin="-50px"
     >
-      <div className="flex gap-10 pt-4 flex-wrap justify-center items-center">
+      <div className="flex flex-wrap items-center justify-center gap-10 pt-4">
         <Image
           priority
           alt="nextjs logo in a white background"
@@ -102,7 +102,7 @@ function SkillsetImages() {
           alt="typescript logo in a white background"
           width={60}
           height={60}
-          className="w-16 object-contain rounded-2xl overflow-hidden"
+          className="w-16 overflow-hidden rounded-2xl object-contain"
           src="/typescript.jpg"
         />
         <Image

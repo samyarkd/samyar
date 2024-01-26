@@ -6,15 +6,15 @@ import { SamyarSvg } from './samyar-svg'
 const Header = () => {
   return (
     <>
-      <div className="fixed top-0 h-[65px] sm:h-[68px] w-full z-50 backdrop-blur border-b border-white/25 backdrop-brightness-50 border-solid">
-        <header className="max-w-5xl flex items-center h-full mx-auto w-full px-4 py-2">
-          <Link href="/" className={clsx('text-2xl h-full')}>
+      <div className="fixed top-0 z-50 h-[65px] w-full border-b border-solid border-white/25 backdrop-blur backdrop-brightness-50 sm:h-[68px]">
+        <header className="mx-auto flex h-full w-full max-w-5xl items-center px-4 py-2">
+          <Link href="/" className={clsx('h-full text-2xl')}>
             <SamyarSvg />
           </Link>
 
           <MobileMenu />
 
-          <ul className="hidden ms-auto sm:flex gap-8 sm:items-baseline">
+          <ul className="ms-auto hidden gap-8 sm:flex sm:items-baseline">
             <Link href="/blog" className={clsx('text-lg')}>
               Blog
             </Link>

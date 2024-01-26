@@ -18,17 +18,17 @@ const BlogPage = async (props: PostQuery) => {
   const post = props.post
 
   return (
-    <div className={clsx('max-w-xl w-full mx-auto flex flex-col space-y-5')}>
+    <div className={clsx('mx-auto flex w-full max-w-xl flex-col space-y-5')}>
       <div className="space-y-2">
-        <time className="text-sm font-sans text-slate-400">
+        <time className="font-sans text-sm text-slate-400">
           {new Date(post.date).toDateString()}
         </time>
-        <h1 className="text-3xl sm:text-5xl">{post.title}</h1>
+        <h1 className="text-4xl font-semibold sm:text-5xl">{post.title}</h1>
         <p className="text-sm sm:text-base">{post?.description}</p>
         {post?.hero && <Image {...getImageProps(post.hero, post.title)} />}
       </div>
       <hr />
-      <article className="text-white prose prose-base md:prose-lg">
+      <article className="prose prose-base text-white md:prose-lg">
         <TinaMarkdown components={components} content={post.body} />
       </article>
     </div>

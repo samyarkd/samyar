@@ -115,7 +115,7 @@ const StarsBackground: React.FC = () => {
   }, [])
 
   return (
-    <canvas ref={canvasRef} className="fixed top-0 -z-10 w-screen h-screen" />
+    <canvas ref={canvasRef} className="fixed top-0 -z-10 h-screen w-screen" />
   )
 }
 

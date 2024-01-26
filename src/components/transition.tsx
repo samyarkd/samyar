@@ -19,7 +19,8 @@ const BlogTransition = ({ children }: { children: ReactNode }) => {
       key={pathname}
       variants={variants}
       initial="hidden"
-      animate="enter">
+      animate="enter"
+    >
       {children}
     </motion.main>
   )

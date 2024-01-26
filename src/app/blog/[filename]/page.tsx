@@ -34,4 +34,4 @@ const Page = async ({ params }: { params: FetchPostParams }) => {
 
 export default Page
 // Don't cache
-export const revalidate = 0
+export const dynamic = 'force-dynamic'

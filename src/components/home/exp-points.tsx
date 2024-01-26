@@ -7,7 +7,7 @@ import TransitionHelper from '../transition/transition-helper'
 
 function ExpPoints() {
   return (
-    <HomeSection className="py-12 overflow-hidden">
+    <HomeSection className="overflow-hidden py-12">
       <TransitionHelper
         showInView
         initial={{ y: 100, opacity: 0 }}
@@ -16,12 +16,12 @@ function ExpPoints() {
           delay: 0.1
         }}
       >
-        <div className="text-center space-y-4">
+        <div className="space-y-4 text-center">
           <SectionHeader>Exp Points</SectionHeader>
           <Description>
             So here are some experience points (
             <Link
-              className="underline font-medium text-white/90"
+              className="font-medium text-white/90 underline"
               href={'https://jvns.ca/blog/brag-documents/'}
               target="_blank"
               rel="norefrence"
@@ -46,7 +46,7 @@ function ExpPoints() {
             >
               <div key={i} className="max-w-3xl">
                 <SecondaryHeader>{p['project name']}</SecondaryHeader>
-                <ul className="py-4 px-10 space-y-2">
+                <ul className="space-y-2 px-10 py-4">
                   {p.description.map((d, i) => (
                     <li className="list-item list-disc" key={i}>
                       {d}

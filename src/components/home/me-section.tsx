@@ -26,7 +26,7 @@ export default function MeSection() {
           className="mb-2"
         >
           <Image
-            className="w-full md:min-w-[225px] mx-auto object-cover object-center shadow-xl shadow-white/20 max-w-xs xs:w-3/4 rounded-lg"
+            className="mx-auto w-full max-w-xs rounded-lg object-cover object-center shadow-xl shadow-white/20 xs:w-3/4 md:min-w-[225px]"
             width={620}
             height={620}
             alt="Samyarkd"
@@ -51,7 +51,7 @@ export default function MeSection() {
             <p className="col-span-3 max-w-sm">
               Welcome to my personal blog and portfolio 👀. I&#39;m a web
               developer who can create stunning websites using cutting-edge{' '}
-              <span className="antialiased font-semibold">Front-End</span>{' '}
+              <span className="font-semibold antialiased">Front-End</span>{' '}
               technologies. Specialized in{' '}
               <RoughNotation
                 animationDelay={1000}
@@ -60,7 +60,7 @@ export default function MeSection() {
                 color="red"
                 show
               >
-                <span className="antialiased font-semibold">ReactJs</span>
+                <span className="font-semibold antialiased">ReactJs</span>
               </RoughNotation>{' '}
               ecosystem. I love exploring new technologies and sharing my
               insights with you.

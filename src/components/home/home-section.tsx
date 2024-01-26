@@ -9,7 +9,7 @@ const HomeSection = forwardRef<
     <section
       ref={ref}
       className={clsx(
-        'max-w-5xl overflow-auto px-7 mx-auto flex flex-col items-center justify-center',
+        'mx-auto flex max-w-5xl flex-col items-center justify-center overflow-auto px-7',
         className
       )}
     >

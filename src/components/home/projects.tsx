@@ -51,29 +51,29 @@ const ProjectCard = ({ project }: { project: TProject }) => {
     >
       <div
         ref={projectRef}
-        className={`card gap-4 flex h-full flex-col group p-2 backdrop-blur`}
+        className={`card group flex h-full flex-col gap-4 p-2 backdrop-blur`}
       >
         <RoughNotation type="underline" color={color} show>
           <Image
-            className="border border-solid border-gray-800 rounded w-full h-[200px] object-cover object-top"
+            className="h-[200px] w-full rounded border border-solid border-gray-800 object-cover object-top"
             width={1800}
             height={1000}
             src={project.image}
             alt={project.name}
           />
         </RoughNotation>
-        <div className="h-full flex flex-col">
+        <div className="flex h-full flex-col">
           <h3 className="text-xl font-semibold">{project.name}</h3>
           <p>{project.description}</p>
-          <p className="space-x-2 mb-3 flex flex-wrap">
+          <p className="mb-3 flex flex-wrap space-x-2">
             {project.technologies.map((t) => (
-              <span className="text-zinc-400 px-1 rounded-lg text-sm" key={t}>
+              <span className="rounded-lg px-1 text-sm text-zinc-400" key={t}>
                 {t}
               </span>
             ))}
           </p>
           <Link
-            className="mt-auto group-hover:bg-gray-200 transition w-full block group-hover:text-gray-800 text-center p-1 rounded-lg text-sm"
+            className="mt-auto block w-full rounded-lg p-1 text-center text-sm transition group-hover:bg-gray-200 group-hover:text-gray-800"
             href={project.website}
             target="_blank"
             rel="noopener noreferrer"
@@ -87,7 +87,7 @@ const ProjectCard = ({ project }: { project: TProject }) => {
 }
 export default function Projects() {
   return (
-    <HomeSection className="w-full h-auto py-12 space-y-16 overflow-hidden">
+    <HomeSection className="h-auto w-full space-y-16 overflow-hidden py-12">
       <TransitionHelper
         showInView
         initial={{ y: 100, opacity: 0 }}
@@ -104,18 +104,19 @@ export default function Projects() {
           </Description>
         </div>
       </TransitionHelper>
-      <div className="mt-4 grid xs:grid-cols-2 md:grid-cols-3 gap-8 mx-auto">
+      <div className="mx-auto mt-4 grid gap-8 xs:grid-cols-2 md:grid-cols-3">
         {projects.map((p, idx) => {
           return (
             <TransitionHelper
               showInView
+              key={idx}
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{
                 delay: 0.1
               }}
             >
-              <ProjectCard key={idx} project={p} />
+              <ProjectCard project={p} />
             </TransitionHelper>
           )
         })}

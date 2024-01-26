@@ -12,7 +12,7 @@ export default function VisualizedHeaderTitle() {
   })
 
   return (
-    <div className="text-center space-y-4 pb-4" ref={headingRef}>
+    <div className="space-y-4 pb-4 text-center" ref={headingRef}>
       <SecondaryHeader>
         <RoughNotation
           animate

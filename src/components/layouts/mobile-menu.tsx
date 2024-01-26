@@ -1,15 +1,30 @@
 'use client'
 
-import useTheme from '@/utils/hooks/useTheme'
 import clsx from 'clsx'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
+import TransitionHelper from '../transition/transition-helper'
+import { AnimatePresence } from 'framer-motion'
+
+const nav = [
+  {
+    label: 'Blog',
+    path: '/blog'
+  },
+  {
+    label: 'Contact',
+    path: '#contact'
+  },
+  {
+    label: 'About Me',
+    path: '/about'
+  }
+]
 
 export const MobileMenu = () => {
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
-  const theme = useTheme()
 
   useEffect(() => {
     setOpen(false)
@@ -21,7 +36,7 @@ export const MobileMenu = () => {
         onClick={() => {
           setOpen(!open)
         }}
-        className="sm:hidden ms-auto w-6"
+        className="ms-auto w-6 sm:hidden"
       >
         {open ? (
           <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
@@ -57,28 +72,39 @@ export const MobileMenu = () => {
           </svg>
         )}
       </button>
-      <ul
-        className={clsx(
-          open ? '' : 'hidden',
-          'absolute flex mt-10 bg-body w-full z-20 flex-col ms-auto sm:hidden left-0 p-2 space-y-4 items-baseline'
+      <AnimatePresence>
+        {open && (
+          <TransitionHelper
+            className="absolute left-0 top-full z-20 w-full"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <ul
+              className={clsx(
+                'bg-body ms-auto flex flex-col items-baseline space-y-2 border-y border-white/25 p-2 sm:hidden'
+              )}
+            >
+              {nav.map((link) => (
+                <Link
+                  href={link.path}
+                  className={clsx(
+                    'w-full rounded px-2 py-1 text-lg transition hover:bg-white/20'
+                  )}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </ul>
+          </TransitionHelper>
         )}
-      >
-        <Link href="/blog" className={clsx('text-lg')}>
-          Blog
-        </Link>
-        <Link href="/#contact" className={clsx('text-lg')}>
-          Contact
-        </Link>
-        <Link href="/about" className={clsx('text-lg')}>
-          About
-        </Link>
-      </ul>
+      </AnimatePresence>
       <div
         onClick={() => {
           setOpen(false)
         }}
         className={clsx(
-          'absolute bg-black/5 -bottom-32 h-screen w-screen left-0',
+          'absolute left-0 top-full h-screen w-screen bg-black/5',
           open ? '' : 'hidden'
         )}
       />

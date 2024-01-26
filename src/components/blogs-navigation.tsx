@@ -22,7 +22,8 @@ const BlogsNavigation = ({
           )
         }}
         className="disabled:cursor-not-allowed"
-        disabled={!pageInfo.hasNextPage}>
+        disabled={!pageInfo.hasNextPage}
+      >
         Next
       </button>
 
@@ -34,7 +35,8 @@ const BlogsNavigation = ({
           )
         }}
         className="disabled:cursor-not-allowed"
-        disabled={pageInfo.endCursor === null}>
+        disabled={pageInfo.endCursor === null}
+      >
         Prev
       </button>
     </div>

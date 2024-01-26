@@ -22,11 +22,11 @@ const BlogPosts = async () => {
   blogPosts.data.postConnection.edges?.reverse()
 
   return (
-    <div className="flex flex-col space-y-10 max-w-xl mx-auto">
+    <div className="mx-auto flex max-w-xl flex-col space-y-10">
       <h1>Blog Posts</h1>
       {blogPosts?.data.postConnection.edges?.map((p) => (
         <Link
-          className="border p-2 space-y-4 rounded border-solid shadow shadow-white/20 hover:shadow-white/10 border-gray-300 transition-shadow group/item"
+          className="group/item space-y-4 rounded border border-solid border-gray-300 p-2 shadow shadow-white/20 transition-shadow hover:shadow-white/10"
           href={`/blog/${p?.node?._sys.filename}`}
           key={p?.node?.id}
         >
@@ -40,14 +40,14 @@ const BlogPosts = async () => {
                   .join(' ')}
               </time>
             )}
-            <h2 className="font-medium antialiased leading-none text-3xl group-hover/item:underline ">
+            <h2 className="text-3xl font-medium leading-none antialiased group-hover/item:underline ">
               {p?.node?.title as string}
             </h2>
           </div>
           <div>
             <p className="text-sm md:text-lg">
               {p?.node?.description}{' '}
-              <span className="hidden animate-pulse group-hover/item:inline text-gray-400">
+              <span className="hidden animate-pulse text-gray-400 group-hover/item:inline">
                 read more...
               </span>
             </p>
@@ -57,7 +57,7 @@ const BlogPosts = async () => {
                 src={p?.node?.hero}
                 width={900}
                 height={300}
-                className="rounded mx-auto w-full mt-1"
+                className="mx-auto mt-1 w-full rounded"
               />
             )}
           </div>
@@ -68,5 +68,4 @@ const BlogPosts = async () => {
 }
 
 export default BlogPosts
-
-export const revalidate = 0
+export const dynamic = 'force-dynamic'

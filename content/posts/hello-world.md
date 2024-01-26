@@ -14,8 +14,8 @@ Suspendisse facilisis, mi ac scelerisque interdum, ligula ex imperdiet felis, a 
 
 ```javascript
 if (x === 'he') {
-  console.log("ok this is it")
+  console.log('ok this is it')
 }
 ```
 
-and this is a small code 
+and this is a small code
