@@ -24,7 +24,9 @@ const TransitionHelper = ({
     <motion.div
       ref={divRef}
       {...rest}
-      animate={isInView ? rest.animate : rest.initial}
+      animate={
+        showInView ? (isInView ? rest.animate : rest.initial) : rest.animate
+      }
     />
   )
 }

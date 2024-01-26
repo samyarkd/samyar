@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: 212, 212, 212;
-  --background-end-rgb: 9, 9, 11;
+  --background-end-rgb: 20, 20, 20;
   --background-start-rgb: 9, 9, 11;
 }
 
@@ -16,6 +16,7 @@
 html {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-end-rgb));
+  overflow-y: scroll;
 
   .bg-body {
     background: linear-gradient(

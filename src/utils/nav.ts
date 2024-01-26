@@ -1,14 +1,18 @@
 export const nav = [
   {
+    label: 'Home',
+    path: '/'
+  },
+  {
     label: 'Blog',
     path: '/blog'
   },
   {
     label: 'Contact',
-    path: '#contact'
+    path: '/contact'
   },
   {
-    label: 'About Me',
+    label: 'About',
     path: '/about'
   }
 ]
