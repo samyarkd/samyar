@@ -6,21 +6,7 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import TransitionHelper from '../transition/transition-helper'
 import { AnimatePresence } from 'framer-motion'
-
-const nav = [
-  {
-    label: 'Blog',
-    path: '/blog'
-  },
-  {
-    label: 'Contact',
-    path: '#contact'
-  },
-  {
-    label: 'About Me',
-    path: '/about'
-  }
-]
+import { nav } from '@/utils/nav'
 
 export const MobileMenu = () => {
   const [open, setOpen] = useState(false)
@@ -87,6 +73,7 @@ export const MobileMenu = () => {
             >
               {nav.map((link) => (
                 <Link
+                  key={link.path}
                   href={link.path}
                   className={clsx(
                     'w-full rounded px-2 py-1 text-lg transition hover:bg-white/20'

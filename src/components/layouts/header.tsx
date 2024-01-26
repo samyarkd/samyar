@@ -2,6 +2,7 @@ import { MobileMenu } from '@/components/layouts/mobile-menu'
 import clsx from 'clsx'
 import Link from 'next/link'
 import { SamyarSvg } from './samyar-svg'
+import { nav } from '@/utils/nav'
 
 const Header = () => {
   return (
@@ -15,15 +16,15 @@ const Header = () => {
           <MobileMenu />
 
           <ul className="ms-auto hidden gap-8 sm:flex sm:items-baseline">
-            <Link href="/blog" className={clsx('text-lg')}>
-              Blog
-            </Link>
-            <Link href="/contact" className={clsx('text-lg')}>
-              Contact
-            </Link>
-            <Link href="/about" className={clsx('text-lg')}>
-              About
-            </Link>
+            {nav.map((link) => (
+              <Link
+                key={link.path}
+                href={link.path}
+                className={clsx('text-lg')}
+              >
+                {link.label}
+              </Link>
+            ))}
           </ul>
         </header>
       </div>
