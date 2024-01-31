@@ -4,8 +4,8 @@ import { usePathname } from 'next/navigation'
 import { useLayoutEffect, type ReactNode } from 'react'
 
 const variants = {
-  hidden: { opacity: 0, x: 0, y: 200 },
-  enter: { opacity: 1, x: 0, y: 0 }
+  hidden: { opacity: 0, x: 0 },
+  enter: { opacity: 1, x: 0 }
 }
 
 const BlogTransition = ({ children }: { children: ReactNode }) => {

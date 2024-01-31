@@ -4,14 +4,15 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import { TinaMarkdown, type Components } from 'tinacms/dist/rich-text'
 import { type PostQuery } from '../../tina/__generated__/types'
+import TransitionHelper from './transition/transition-helper'
 
 // Extracted a function to get the image props
 const getImageProps = (image: string, alt: string) => ({
   width: 900,
-  height: 400,
+  height: 300,
   src: image,
   alt,
-  className: 'rounded mx-auto w-full'
+  className: 'mx-auto mt-1 w-full rounded'
 })
 
 const BlogPage = async (props: PostQuery) => {
@@ -20,12 +21,23 @@ const BlogPage = async (props: PostQuery) => {
   return (
     <div className={clsx('mx-auto flex w-full max-w-xl flex-col space-y-5')}>
       <div className="space-y-2">
-        <time className="font-sans text-sm text-slate-400">
-          {new Date(post.date).toDateString()}
-        </time>
-        <h1 className="text-4xl font-semibold sm:text-5xl">{post.title}</h1>
-        <p className="text-sm sm:text-base">{post?.description}</p>
-        {post?.hero && <Image {...getImageProps(post.hero, post.title)} />}
+        <TransitionHelper layout="position" layoutId={post._sys.filename}>
+          <time className="font-sans text-sm text-slate-400">
+            {new Date(post.date)
+              .toDateString()
+              .split(' ')
+              .filter((_, i) => i > 0)
+              .join(' ')}
+          </time>
+
+          <h1 className="text-4xl font-semibold sm:text-5xl">{post.title}</h1>
+          <p className="text-sm sm:text-base">{post?.description}</p>
+        </TransitionHelper>
+        {post?.hero && (
+          <TransitionHelper layout="position" layoutId={post.hero}>
+            <Image {...getImageProps(post.hero, post.title)} />
+          </TransitionHelper>
+        )}
       </div>
       <hr />
       <article className="prose prose-base text-white md:prose-lg">
