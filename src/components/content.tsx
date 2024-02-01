@@ -1,5 +1,6 @@
 import clsx from 'clsx'
 import { type ReactNode } from 'react'
+import TransitionHelper from './transition/transition-helper'
 
 const Content = ({
   children,
@@ -16,7 +17,9 @@ const Content = ({
           className
         )}
       >
-        {children}
+        <TransitionHelper initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          {children}
+        </TransitionHelper>
       </div>
     </main>
   )

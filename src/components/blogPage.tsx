@@ -1,15 +1,14 @@
 import clsx from 'clsx'
-import Image from 'next/image'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import { TinaMarkdown, type Components } from 'tinacms/dist/rich-text'
 import { type PostQuery } from '../../tina/__generated__/types'
 import TransitionHelper from './transition/transition-helper'
+import { motion } from 'framer-motion'
+import MotionImage from './transition/motion-image'
 
 // Extracted a function to get the image props
 const getImageProps = (image: string, alt: string) => ({
-  width: 900,
-  height: 300,
   src: image,
   alt,
   className: 'mx-auto mt-1 w-full rounded'
@@ -34,9 +33,10 @@ const BlogPage = async (props: PostQuery) => {
           <p className="text-sm sm:text-base">{post?.description}</p>
         </TransitionHelper>
         {post?.hero && (
-          <TransitionHelper layout="position" layoutId={post.hero}>
-            <Image {...getImageProps(post.hero, post.title)} />
-          </TransitionHelper>
+          <MotionImage
+            layoutId={post.hero}
+            {...getImageProps(post.hero, post.title)}
+          />
         )}
       </div>
       <hr />

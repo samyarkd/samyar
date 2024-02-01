@@ -3,6 +3,7 @@ import { tinaclient } from '@/utils/tina'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import MotionImage from '@/components/transition/motion-image'
 export const metadata = {
   title: "Samyar's blog 👀",
   description: 'I write my thoughts here (^◕.◕^)'
@@ -54,15 +55,12 @@ const BlogPosts = async () => {
             </p>
           </TransitionHelper>
           {p?.node?.hero != null && (
-            <TransitionHelper layout="position" layoutId={p?.node?.hero}>
-              <Image
-                alt={p?.node?.title}
-                src={p?.node?.hero}
-                width={900}
-                height={300}
-                className="mx-auto mt-1 w-full rounded"
-              />
-            </TransitionHelper>
+            <MotionImage
+              layoutId={p.node.hero}
+              alt={p?.node?.title}
+              src={p?.node?.hero}
+              className="mx-auto mt-1 w-full rounded"
+            />
           )}
         </Link>
       ))}
