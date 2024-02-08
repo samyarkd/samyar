@@ -25,10 +25,4 @@ For example, in my case i just had to call it when user authenticated because so
 
 At first i called `router.refresh` but according to the docs even if you do it the in-memory cache will not immediately get revalidated. but with this approach you will be able to revalidate the entire in-memory cache of all the app through a server-action immediately by calling it.
 
-Tags:
-
-\#react
-
-\#coding
-
-\#nextjs
+Tags: #react #coding #nextjs
