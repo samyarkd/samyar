@@ -4,7 +4,6 @@ import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import { TinaMarkdown, type Components } from 'tinacms/dist/rich-text'
 import { type PostQuery } from '../../tina/__generated__/types'
 import TransitionHelper from './transition/transition-helper'
-import { motion } from 'framer-motion'
 import MotionImage from './transition/motion-image'
 
 // Extracted a function to get the image props
@@ -40,7 +39,7 @@ const BlogPage = async (props: PostQuery) => {
         )}
       </div>
       <hr />
-      <article className="prose prose-base text-white md:prose-lg">
+      <article className="prose prose-base prose-zinc prose-invert md:prose-lg">
         <TinaMarkdown components={components} content={post.body} />
       </article>
     </div>
@@ -75,8 +74,6 @@ const components: Components<any> = {
   },
 
   code_block: (props: any) => {
-    console.log(props)
-
     return (
       <SyntaxHighlighter language={props.lang} style={dracula}>
         {props.value}
