@@ -28,7 +28,9 @@ const BlogPage = async (props: PostQuery) => {
               .join(' ')}
           </time>
 
-          <h1 className="text-4xl font-semibold sm:text-5xl">{post.title}</h1>
+          <h1 className="mb-2 text-3xl font-semibold sm:text-4xl">
+            {post.title}
+          </h1>
           <p className="text-sm sm:text-base">{post?.description}</p>
         </TransitionHelper>
         {post?.hero && (
