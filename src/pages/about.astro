@@ -1,0 +1,68 @@
+---
+import aboutImg from "@/assets/about-astro.png";
+import PageLayout from "@/layouts/Base.astro";
+import { Image } from "astro:assets";
+
+const meta = {
+	description: "I'm a starter theme for Astro.build",
+	title: "About",
+};
+---
+
+<PageLayout meta={meta}>
+	<div class="space-y-6">
+		<h1 class="title">About</h1>
+		<p>
+			<span id="my-age"> </span>
+		</p>
+		<div class="flex justify-center">
+			<Image
+				alt="A cartoon cactus looking at the 'Astro.build' logo"
+				fetchpriority="high"
+				loading="eager"
+				src={aboutImg}
+			/>
+		</div>
+		<p>Here are my some of my awesome built in features:</p>
+		<ul class="list-inside list-disc">
+			<li>I'm ultra fast as I'm a static site</li>
+			<li>I'm fully responsive</li>
+			<li>I come with a light and dark mode</li>
+			<li>I'm easy to customise and add additional content</li>
+			<li>I have Tailwind CSS styling</li>
+			<li>Shiki code syntax highlighting</li>
+			<li>Satori for auto generating OG images for blog posts</li>
+		</ul>
+		<p>
+			Clone or fork my <a
+				aria-label="github repository"
+				class="cactus-link inline-block"
+				href="https://github.com/chrismwilliams/astro-cactus"
+				rel="noopener noreferrer"
+				target="_blank">repo</a
+			> if you like me!
+		</p>
+	</div>
+</PageLayout>
+
+<script>
+	function calculateAge(birthDate: Date): number {
+		const today = new Date();
+		const birth = new Date(birthDate);
+		let age = today.getFullYear() - birth.getFullYear();
+
+		if (
+			today.getMonth() < birth.getMonth() ||
+			(today.getMonth() === birth.getMonth() && today.getDate() < birth.getDate())
+		) {
+			age--;
+		}
+
+		return age;
+	}
+
+	const myBirthdate = new Date("2004-04-17"); // Format: YYYY-MM-DD
+	const myAge = calculateAge(myBirthdate);
+  const myAgeSpan = document.getElementById("my-age")
+  myAgeSpan && myAgeSpan.innerText = myAge;
+</script>
