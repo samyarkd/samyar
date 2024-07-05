@@ -23,7 +23,7 @@
 		"satori": "0.10.14",
 		"satori-html": "^0.3.2",
 		"sharp": "^0.33.4",
-		"typescript": "^5.4.5"
+		"typescript": "^5.5.3"
 	},
 	"devDependencies": {
 		"@astrojs/check": "^0.5.10",
