@@ -49,8 +49,8 @@ importers:
         version: 5.4.5
     devDependencies:
       '@iconify-json/devicon':
-        specifier: ^1.1.43
-        version: 1.1.43
+        specifier: ^1.1.45
+        version: 1.1.45
       '@iconify-json/mdi':
         specifier: ^1.1.66
         version: 1.1.66
@@ -679,8 +679,8 @@ packages:
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
     deprecated: Use @eslint/object-schema instead
 
-  '@iconify-json/devicon@1.1.43':
-    resolution: {integrity: sha512-YOz/uZfh+mIzXTQI4Kh6IKHs5h8QJN9lCDXDejof6r8F3ICAVivJcrDSnR/9pMuecvGsxdB41wipvpC0roCPcg==}
+  '@iconify-json/devicon@1.1.45':
+    resolution: {integrity: sha512-gKgfTr435D04V48kLMkjxZvg5mn3/Os9RE0VK5JeuypOOI/SrECIWOapIVJnDkNlrxF+dilBHCxmwq7bMCxr1A==}
 
   '@iconify-json/mdi@1.1.66':
     resolution: {integrity: sha512-7KPF2RVUUWav/hXCM8Ti/smqu3cmgePJpiX9CSkldiL+80+eBRBeKlc4vPOc9jhAItlqIU1vKsbKoPP0JIfgbg==}
@@ -4751,7 +4751,7 @@ snapshots:
 
   '@humanwhocodes/object-schema@2.0.3': {}
 
-  '@iconify-json/devicon@1.1.43':
+  '@iconify-json/devicon@1.1.45':
     dependencies:
       '@iconify/types': 2.0.0
 
