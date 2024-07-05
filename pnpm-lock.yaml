@@ -18,8 +18,8 @@ importers:
         specifier: 4.0.5
         version: 4.0.5
       '@astrojs/sitemap':
-        specifier: 3.1.2
-        version: 3.1.2
+        specifier: 3.1.6
+        version: 3.1.6
       '@astrojs/tailwind':
         specifier: 5.1.0
         version: 5.1.0(astro@4.5.16(@types/node@20.11.17)(typescript@5.4.5))(tailwindcss@3.4.3)
@@ -208,8 +208,8 @@ packages:
   '@astrojs/rss@4.0.5':
     resolution: {integrity: sha512-IyJVL6z09AQtxbgLaAwebT3T5YKe4oTHDesqydJv1KLHw+zEzzMCFuuNsEyxjiqu7df9+DDCpDXLj/WRiEUXvw==}
 
-  '@astrojs/sitemap@3.1.2':
-    resolution: {integrity: sha512-FxOJldIl5ltZ5CNjocQxHkAO9orwHBjqtaU28o4smobp9vowS0nbGp+I9CrPxkzWdl1crSDm9vjL9tnvG1DSug==}
+  '@astrojs/sitemap@3.1.6':
+    resolution: {integrity: sha512-1Qp2NvAzVImqA6y+LubKi1DVhve/hXXgFvB0szxiipzh7BvtuKe4oJJ9dXSqaubaTkt4nMa6dv6RCCAYeB6xaQ==}
 
   '@astrojs/tailwind@5.1.0':
     resolution: {integrity: sha512-BJoCDKuWhU9FT2qYg+fr6Nfb3qP4ShtyjXGHKA/4mHN94z7BGcmauQK23iy+YH5qWvTnhqkd6mQPQ1yTZTe9Ig==}
@@ -3667,8 +3667,8 @@ packages:
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
 
-  sitemap@7.1.1:
-    resolution: {integrity: sha512-mK3aFtjz4VdJN0igpIJrinf3EO8U8mxOPsTBzSsy06UtjZQJ3YY3o3Xa7zSc5nMqcMrRwlChHZ18Kxg0caiPBg==}
+  sitemap@7.1.2:
+    resolution: {integrity: sha512-ARCqzHJ0p4gWt+j7NlU5eDlIO9+Rkr/JhPFZKKQ1l5GCus7rJH4UdrlVAh0xC/gDS/Qir2UMxqYNHtsKr2rpCw==}
     engines: {node: '>=12.0.0', npm: '>=5.6.0'}
     hasBin: true
 
@@ -3697,6 +3697,9 @@ packages:
   stdin-discarder@0.1.0:
     resolution: {integrity: sha512-xhV7w8S+bUwlPTb4bAOUQhv8/cSS5offJuX8GQGq32ONF0ZtDWKfkdomM3HMRA+LhX6um/FZ0COqlwsjD53LeQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+
+  stream-replace-string@2.0.0:
+    resolution: {integrity: sha512-TlnjJ1C0QrmxRNrON00JvaFFlNh5TTG00APw23j74ET7gkQpTASi6/L2fuiav8pzK715HXtUeClpBTw2NPSn6w==}
 
   streamx@2.16.1:
     resolution: {integrity: sha512-m9QYj6WygWyWa3H1YY69amr4nVgy61xfjys7xO7kviL5rfIEc2naf+ewFiOA+aEJD7y0JO3h2GoiUv4TDwEGzQ==}
@@ -4242,6 +4245,9 @@ packages:
   zod@3.22.4:
     resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
 
+  zod@3.23.8:
+    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
+
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
 
@@ -4358,10 +4364,11 @@ snapshots:
       fast-xml-parser: 4.3.4
       kleur: 4.1.5
 
-  '@astrojs/sitemap@3.1.2':
+  '@astrojs/sitemap@3.1.6':
     dependencies:
-      sitemap: 7.1.1
-      zod: 3.22.4
+      sitemap: 7.1.2
+      stream-replace-string: 2.0.0
+      zod: 3.23.8
 
   '@astrojs/tailwind@5.1.0(astro@4.5.16(@types/node@20.11.17)(typescript@5.4.5))(tailwindcss@3.4.3)':
     dependencies:
@@ -5171,7 +5178,7 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 20.11.17
 
   '@types/semver@7.5.7': {}
 
@@ -8572,7 +8579,7 @@ snapshots:
 
   sisteransi@1.0.5: {}
 
-  sitemap@7.1.1:
+  sitemap@7.1.2:
     dependencies:
       '@types/node': 17.0.45
       '@types/sax': 1.2.7
@@ -8594,6 +8601,8 @@ snapshots:
   stdin-discarder@0.1.0:
     dependencies:
       bl: 5.1.0
+
+  stream-replace-string@2.0.0: {}
 
   streamx@2.16.1:
     dependencies:
@@ -9244,5 +9253,7 @@ snapshots:
       zod: 3.22.4
 
   zod@3.22.4: {}
+
+  zod@3.23.8: {}
 
   zwitch@2.0.4: {}
