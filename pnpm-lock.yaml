@@ -18,8 +18,8 @@ importers:
         specifier: 4.0.7
         version: 4.0.7
       '@astrojs/sitemap':
-        specifier: 3.1.2
-        version: 3.1.2
+        specifier: 3.1.6
+        version: 3.1.6
       '@astrojs/tailwind':
         specifier: 5.1.0
         version: 5.1.0(astro@4.11.5(@types/node@20.11.17)(typescript@5.5.3))(tailwindcss@3.4.4)
@@ -214,8 +214,8 @@ packages:
   '@astrojs/rss@4.0.7':
     resolution: {integrity: sha512-ZEG55XFB19l+DplUvBISmz04UbjDtKliRO4Y5+ERRhAMjgCVVobEBNE6ZwWG1h6orWUocy4nfPihKXDyB73x9g==}
 
-  '@astrojs/sitemap@3.1.2':
-    resolution: {integrity: sha512-FxOJldIl5ltZ5CNjocQxHkAO9orwHBjqtaU28o4smobp9vowS0nbGp+I9CrPxkzWdl1crSDm9vjL9tnvG1DSug==}
+  '@astrojs/sitemap@3.1.6':
+    resolution: {integrity: sha512-1Qp2NvAzVImqA6y+LubKi1DVhve/hXXgFvB0szxiipzh7BvtuKe4oJJ9dXSqaubaTkt4nMa6dv6RCCAYeB6xaQ==}
 
   '@astrojs/tailwind@5.1.0':
     resolution: {integrity: sha512-BJoCDKuWhU9FT2qYg+fr6Nfb3qP4ShtyjXGHKA/4mHN94z7BGcmauQK23iy+YH5qWvTnhqkd6mQPQ1yTZTe9Ig==}
@@ -3638,6 +3638,9 @@ packages:
     resolution: {integrity: sha512-iCGQj+0l0HOdZ2AEeBADlsRC+vsnDsZsbdSiH1yNSjcfKM7fdpCMfqAL/dwF5BLiw/XhRft/Wax6zQbhq2BcjQ==}
     engines: {node: '>= 0.4'}
 
+  stream-replace-string@2.0.0:
+    resolution: {integrity: sha512-TlnjJ1C0QrmxRNrON00JvaFFlNh5TTG00APw23j74ET7gkQpTASi6/L2fuiav8pzK715HXtUeClpBTw2NPSn6w==}
+
   string-width@4.2.3:
     resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
     engines: {node: '>=8'}
@@ -4336,9 +4339,10 @@ snapshots:
       fast-xml-parser: 4.4.0
       kleur: 4.1.5
 
-  '@astrojs/sitemap@3.1.2':
+  '@astrojs/sitemap@3.1.6':
     dependencies:
       sitemap: 7.1.2
+      stream-replace-string: 2.0.0
       zod: 3.23.8
 
   '@astrojs/tailwind@5.1.0(astro@4.11.5(@types/node@20.11.17)(typescript@5.5.3))(tailwindcss@3.4.4)':
@@ -8641,6 +8645,8 @@ snapshots:
   stop-iteration-iterator@1.0.0:
     dependencies:
       internal-slot: 1.0.6
+
+  stream-replace-string@2.0.0: {}
 
   string-width@4.2.3:
     dependencies:
