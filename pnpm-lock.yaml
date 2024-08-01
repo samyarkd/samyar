@@ -22,7 +22,7 @@ importers:
         version: 3.1.2
       '@astrojs/tailwind':
         specifier: 5.1.0
-        version: 5.1.0(astro@4.11.5(@types/node@20.11.17)(typescript@5.5.3))(tailwindcss@3.4.4)
+        version: 5.1.0(astro@4.11.5(@types/node@20.11.17)(typescript@5.5.3))(tailwindcss@3.4.7)
       astro:
         specifier: 4.11.5
         version: 4.11.5(@types/node@20.11.17)(typescript@5.5.3)
@@ -62,10 +62,10 @@ importers:
         version: 2.6.2
       '@tailwindcss/aspect-ratio':
         specifier: ^0.4.2
-        version: 0.4.2(tailwindcss@3.4.4)
+        version: 0.4.2(tailwindcss@3.4.7)
       '@tailwindcss/typography':
         specifier: ^0.5.12
-        version: 0.5.12(tailwindcss@3.4.4)
+        version: 0.5.12(tailwindcss@3.4.7)
       '@types/eslint':
         specifier: ^8.56.7
         version: 8.56.7
@@ -142,8 +142,8 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0
       tailwindcss:
-        specifier: ^3.4.4
-        version: 3.4.4
+        specifier: ^3.4.7
+        version: 3.4.7
 
 packages:
 
@@ -3746,8 +3746,8 @@ packages:
     resolution: {integrity: sha512-7RnqIMq572L8PeEzKeBINYEJDDxpcH8JEgLwUqBd3TkofhFRbkq4QLR0u+36avGAhCRbk2nnmjcW9SE531hPDg==}
     engines: {node: ^14.18.0 || >=16.0.0}
 
-  tailwindcss@3.4.4:
-    resolution: {integrity: sha512-ZoyXOdJjISB7/BcLTR6SEsLgKtDStYyYZVLsUtWChO4Ps20CBad7lfJKVDiejocV4ME1hLmyY0WJE3hSDcmQ2A==}
+  tailwindcss@3.4.7:
+    resolution: {integrity: sha512-rxWZbe87YJb4OcSopb7up2Ba4U82BoiSGUdoDr3Ydrg9ckxFS/YWsvhN323GMcddgU65QRy7JndC7ahhInhvlQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -4341,13 +4341,13 @@ snapshots:
       sitemap: 7.1.2
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.0(astro@4.11.5(@types/node@20.11.17)(typescript@5.5.3))(tailwindcss@3.4.4)':
+  '@astrojs/tailwind@5.1.0(astro@4.11.5(@types/node@20.11.17)(typescript@5.5.3))(tailwindcss@3.4.7)':
     dependencies:
       astro: 4.11.5(@types/node@20.11.17)(typescript@5.5.3)
       autoprefixer: 10.4.19(postcss@8.4.39)
       postcss: 8.4.39
       postcss-load-config: 4.0.2(postcss@8.4.39)
-      tailwindcss: 3.4.4
+      tailwindcss: 3.4.7
     transitivePeerDependencies:
       - ts-node
 
@@ -4989,17 +4989,17 @@ snapshots:
       fflate: 0.7.4
       string.prototype.codepointat: 0.2.1
 
-  '@tailwindcss/aspect-ratio@0.4.2(tailwindcss@3.4.4)':
+  '@tailwindcss/aspect-ratio@0.4.2(tailwindcss@3.4.7)':
     dependencies:
-      tailwindcss: 3.4.4
+      tailwindcss: 3.4.7
 
-  '@tailwindcss/typography@0.5.12(tailwindcss@3.4.4)':
+  '@tailwindcss/typography@0.5.12(tailwindcss@3.4.7)':
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.4.4
+      tailwindcss: 3.4.7
 
   '@trysound/sax@0.2.0': {}
 
@@ -8775,7 +8775,7 @@ snapshots:
       '@pkgr/core': 0.1.1
       tslib: 2.6.2
 
-  tailwindcss@3.4.4:
+  tailwindcss@3.4.7:
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
