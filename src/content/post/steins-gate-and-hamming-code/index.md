@@ -27,6 +27,12 @@ The whole series is about fighting against this auto error correction algorithm.
 
 But no error correction is 100% accurate. And sometimes not even the algorithm can detect the errors. So that's when the name of the Steins Gate comes into play. Steins Gate is an outcome that both his childhood friend and his lover are alive. Basically altering the bits in a way that both of them will be alive. and also the error correction algorithm can't detect the abnormalities in the system.
 
+### Okabe Disappearing
+
+![changing the outcome without altering the established events](./change-past.png)
+
+When Okabe receives a message from his future self who gives him a mission that he should the past in a way that all the effects of those events still will be there. He changes the outcome is not a one where he is there so he simply stops existing and disapears. Also everyone forgets about him. this is the result of the simulation fixing itself because of him remembering other worldlines thus those memories contrdict with the world line he is there and the worldline fixes itself (removes the wrong bits).
+
 ## This is it
 
 The rest depends on your imagination and curiosity to connect dots or not and disagree with me.
