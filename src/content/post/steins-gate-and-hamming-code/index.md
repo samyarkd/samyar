@@ -8,6 +8,7 @@ coverImage:
 tags:
   - anime
   - me
+  - coding
 ---
 
 They literally have auto-error correction in their world. Just think about it, [Okabe](https://en.wikipedia.org/wiki/Rintaro_Okabe) disappears in one of the episodes, and everyone forgets about him. It’s almost like the world automatically corrects errors that shouldn’t be there, ensuring that nothing is out of order.
