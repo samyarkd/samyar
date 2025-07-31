@@ -6,7 +6,7 @@ tags:
   - tailwind
   - css
   - web
-  - conding
+  - coding
 ---
 
 <style>
