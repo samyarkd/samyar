@@ -11,12 +11,11 @@ tags:
   - web
 ---
 
-Creating a cool placeholder text writing effect animation in [React](https://react.dev/) using [Framer-Motion](https://framer.com/motion) was one the recent challenges that overcome and today i want to share it with you guys.
+Creating a cool placeholder text writing effect animation in [React](https://react.dev/) using [Framer-Motion](https://framer.com/motion) was one the recent challenges that I overcome and today I want to share it with you guys.
 
 ## Framer Motion Solution
 
 This solution is pretty easy to understand and implement in framer motion.
-![[Creating a Placeholder animation in React using Framer-Motion.gif]]
 This animation is achievable via `animate` function provided by Framer Motion, you can learn about how it works [here](https://www.framer.com/motion/animate-function/).
 
 ```tsx
