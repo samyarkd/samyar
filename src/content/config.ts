@@ -1,4 +1,4 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection, z } from "astro:content"
 
 function removeDupsAndLowerCase(array: string[]) {
 	if (!array.length) return array;
@@ -16,7 +16,7 @@ const post = defineCollection({
 					src: image(),
 				})
 				.optional(),
-			description: z.string().min(50).max(160),
+			description: z.string().min(50).max(200),
 			draft: z.boolean().default(false),
 			ogImage: z.string().optional(),
 			publishDate: z
