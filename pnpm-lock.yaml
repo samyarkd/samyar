@@ -79,8 +79,8 @@ importers:
         specifier: ^0.16.3
         version: 0.16.3
       autoprefixer:
-        specifier: ^10.4.19
-        version: 10.4.19(postcss@8.4.39)
+        specifier: ^10.4.20
+        version: 10.4.20(postcss@8.4.39)
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -1312,8 +1312,8 @@ packages:
     peerDependencies:
       '@astrojs/compiler': '>=0.27.0'
 
-  autoprefixer@10.4.19:
-    resolution: {integrity: sha512-BaENR2+zBZ8xXhM4pUaKUxlVdxZ0EZhjvbopwnXmxRUfqDmwSpC2lAi/QXvx7NRdPCo1WKEcEF6mV64si1z4Ew==}
+  autoprefixer@10.4.20:
+    resolution: {integrity: sha512-XY25y5xSv/wEoqzDyXXME4AFfkZI0P23z6Fs3YgymDnKJkCGOnkL0iTxCa85UTqaSgfcqyf3UA6+c7wUvx/16g==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
@@ -1379,6 +1379,11 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
+  browserslist@4.23.3:
+    resolution: {integrity: sha512-btwCFJVjI4YWDNfau8RhZ+B1Q/VLoUITrm3RlP6y1tYGWIOa+InuYiRGXUBXo8nA1qKmHMyLB/iVQg5TT4eFoA==}
+    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
+    hasBin: true
+
   buffer-crc32@0.2.13:
     resolution: {integrity: sha512-VO9Ht/+p3SN7SKWqcrgEzjGbRSJYTx+Q1pTQC0wrWqHx0vpJraQ6GtHx8tvcg1rlK1byhU5gccxgOgj7B0TDkQ==}
 
@@ -1406,6 +1411,9 @@ packages:
 
   caniuse-lite@1.0.30001607:
     resolution: {integrity: sha512-WcvhVRjXLKFB/kmOFVwELtMxyhq3iM/MvmXcyCe2PNf166c39mptscOc/45TTS96n2gpNV2z7+NakArTWZCQ3w==}
+
+  caniuse-lite@1.0.30001655:
+    resolution: {integrity: sha512-jRGVy3iSGO5Uutn2owlb5gR6qsGngTw9ZTb4ali9f3glshcNmJ2noam4Mo9zia5P9Dk3jNNydy7vQjuE5dQmfg==}
 
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
@@ -1706,6 +1714,9 @@ packages:
 
   electron-to-chromium@1.4.729:
     resolution: {integrity: sha512-bx7+5Saea/qu14kmPTDHQxkp2UnziG3iajUQu3BxFvCOnpAJdDbMV4rSl+EqFDkkpNNVUFlR1kDfpL59xfy1HA==}
+
+  electron-to-chromium@1.5.13:
+    resolution: {integrity: sha512-lbBcvtIJ4J6sS4tb5TLp1b4LyfCdMkwStzXPyAgVgTRAsep4bvrAGaBOP7ZJtQMNJpSQ9SqG4brWOroNaQtm7Q==}
 
   emmet@2.4.7:
     resolution: {integrity: sha512-O5O5QNqtdlnQM2bmKHtJgyChcrFMgQuulI+WdiOw2NArzprUqqxUW6bgYtKvzKgrsYpuLWalOkdhNP+1jluhCA==}
@@ -3001,6 +3012,9 @@ packages:
   node-releases@2.0.14:
     resolution: {integrity: sha512-y10wOWt8yZpqXmOgRo77WaHEmhYQYGNA6y421PKsKYWEK8aW+cqAphborZDhqfyKrbZEN92CN1X2KbafY2s7Yw==}
 
+  node-releases@2.0.18:
+    resolution: {integrity: sha512-d9VeXT4SJ7ZeOqGX6R5EM022wpL+eWPooLI+5UpWn2jCT1aosUQEhQP214x33Wkwx3JQMvIm+tIoVOdodFS40g==}
+
   normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
@@ -3189,9 +3203,6 @@ packages:
 
   periscopic@3.1.0:
     resolution: {integrity: sha512-vKiQ8RRtkl9P+r/+oefh25C3fhybptkHKCZSPlcXiJux2tJF55GnEj3BVn4A5gKfq9NWWXXrxkHBwVPUfH0opw==}
-
-  picocolors@1.0.0:
-    resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
 
   picocolors@1.0.1:
     resolution: {integrity: sha512-anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==}
@@ -3961,6 +3972,12 @@ packages:
     peerDependencies:
       browserslist: '>= 4.21.0'
 
+  update-browserslist-db@1.1.0:
+    resolution: {integrity: sha512-EdRAaAyk2cUE1wOf2DkEhzxqOQvFOoRJFNS6NeyJ01Gp2beMRpBAINjM2iDXE3KCuKhwnvHIQCJm6ThL2Z+HzQ==}
+    hasBin: true
+    peerDependencies:
+      browserslist: '>= 4.21.0'
+
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
@@ -4348,7 +4365,7 @@ snapshots:
   '@astrojs/tailwind@5.1.0(astro@4.11.5(@types/node@20.11.17)(typescript@5.5.3))(tailwindcss@3.4.4)':
     dependencies:
       astro: 4.11.5(@types/node@20.11.17)(typescript@5.5.3)
-      autoprefixer: 10.4.19(postcss@8.4.39)
+      autoprefixer: 10.4.20(postcss@8.4.39)
       postcss: 8.4.39
       postcss-load-config: 4.0.2(postcss@8.4.39)
       tailwindcss: 3.4.4
@@ -5617,13 +5634,13 @@ snapshots:
       '@astrojs/compiler': 2.7.1
       synckit: 0.9.0
 
-  autoprefixer@10.4.19(postcss@8.4.39):
+  autoprefixer@10.4.20(postcss@8.4.39):
     dependencies:
-      browserslist: 4.23.0
-      caniuse-lite: 1.0.30001607
+      browserslist: 4.23.3
+      caniuse-lite: 1.0.30001655
       fraction.js: 4.3.7
       normalize-range: 0.1.2
-      picocolors: 1.0.0
+      picocolors: 1.0.1
       postcss: 8.4.39
       postcss-value-parser: 4.2.0
 
@@ -5688,6 +5705,13 @@ snapshots:
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
 
+  browserslist@4.23.3:
+    dependencies:
+      caniuse-lite: 1.0.30001655
+      electron-to-chromium: 1.5.13
+      node-releases: 2.0.18
+      update-browserslist-db: 1.1.0(browserslist@4.23.3)
+
   buffer-crc32@0.2.13: {}
 
   call-bind@1.0.5:
@@ -5713,6 +5737,8 @@ snapshots:
   camelize@1.0.1: {}
 
   caniuse-lite@1.0.30001607: {}
+
+  caniuse-lite@1.0.30001655: {}
 
   ccount@2.0.1: {}
 
@@ -6014,6 +6040,8 @@ snapshots:
   eastasianwidth@0.2.0: {}
 
   electron-to-chromium@1.4.729: {}
+
+  electron-to-chromium@1.5.13: {}
 
   emmet@2.4.7:
     dependencies:
@@ -7888,6 +7916,8 @@ snapshots:
 
   node-releases@2.0.14: {}
 
+  node-releases@2.0.18: {}
+
   normalize-path@3.0.0: {}
 
   normalize-range@0.1.2: {}
@@ -8114,8 +8144,6 @@ snapshots:
       '@types/estree': 1.0.5
       estree-walker: 3.0.3
       is-reference: 3.0.2
-
-  picocolors@1.0.0: {}
 
   picocolors@1.0.1: {}
 
@@ -9073,6 +9101,12 @@ snapshots:
   update-browserslist-db@1.0.13(browserslist@4.23.0):
     dependencies:
       browserslist: 4.23.0
+      escalade: 3.1.2
+      picocolors: 1.0.1
+
+  update-browserslist-db@1.1.0(browserslist@4.23.3):
+    dependencies:
+      browserslist: 4.23.3
       escalade: 3.1.2
       picocolors: 1.0.1
 
