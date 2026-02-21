@@ -48,7 +48,8 @@ Believe is a strong word, it can be interpreted in many ways some might believe 
 A perfect example of this (I mean the man is dedicated):
 <div class="tenor-gif-embed" data-postid="24512168" data-share-method="host" data-aspect-ratio="1.97531" data-width="100%"><a href="https://tenor.com/view/elon-musk-this-is-spacex-tesla-this-is-elon-musk-gif-24512168">Elon Musk This Is GIF</a>from <a href="https://tenor.com/search/elon+musk-gifs">Elon Musk GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
-> These were my raw thoughts about the book I have not read anything about it but I will, so that I can take the most out of it. I enjoy thinking about what I learned after reading a book without looking at reviews and writing them down. maybe I’m wrong on so many levels here. 
+---
+These were my raw thoughts about the book I have not read anything about it but I will, so that I can take the most out of it. I enjoy thinking about what I learned after reading a book without looking at reviews and writing them down. maybe I’m wrong on so many levels here. 
 
 ## Some good lines from The Stranger by Albert Camus
 
