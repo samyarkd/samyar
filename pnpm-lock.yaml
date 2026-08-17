@@ -49,8 +49,8 @@ importers:
         version: 5.5.3
     devDependencies:
       '@iconify-json/devicon':
-        specifier: ^1.1.43
-        version: 1.1.45
+        specifier: ^1.2.4
+        version: 1.2.4
       '@iconify-json/mdi':
         specifier: ^1.1.67
         version: 1.1.67
@@ -543,8 +543,8 @@ packages:
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
     deprecated: Use @eslint/object-schema instead
 
-  '@iconify-json/devicon@1.1.45':
-    resolution: {integrity: sha512-gKgfTr435D04V48kLMkjxZvg5mn3/Os9RE0VK5JeuypOOI/SrECIWOapIVJnDkNlrxF+dilBHCxmwq7bMCxr1A==}
+  '@iconify-json/devicon@1.2.4':
+    resolution: {integrity: sha512-DrYBFGycCW2wAloxxHEDIFuqv9lUYIn6FVbSx/l7ZqhO9rDtD8jLECS+mfn/BTRBs4/uH8wzB0sYPHXulP8aLQ==}
 
   '@iconify-json/mdi@1.1.67':
     resolution: {integrity: sha512-00nllHES8hyACwIfgySlQgAE6MKgpr2wsKfpifMiZWZ9aXC5l4Jb0lR3lJSWwXgOW6kzAOdzC3T+2VOfBBZ13A==}
@@ -1928,6 +1928,7 @@ packages:
   eslint@8.57.0:
     resolution: {integrity: sha512-dZ6+mexnaTIbSBZWgou51U6OmzIhYM2VcNdtiTtI7qPNZm35Akpr0f6vtw3w1Kmn5PYo+tZVfh13WrhpS6oLqQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   espree@10.1.0:
@@ -4681,7 +4682,7 @@ snapshots:
 
   '@humanwhocodes/object-schema@2.0.3': {}
 
-  '@iconify-json/devicon@1.1.45':
+  '@iconify-json/devicon@1.2.4':
     dependencies:
       '@iconify/types': 2.0.0
 
